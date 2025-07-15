@@ -35,7 +35,7 @@ function bootstrap() {
  */
 function register_expired_post_status() {
 	register_post_status(
-		'pwp_expired',
+		'rss_post_expired',
 		array(
 			'label'                     => _x( 'Expired from feed', 'post', 'rss-ingested' ),
 			'public'                    => false,

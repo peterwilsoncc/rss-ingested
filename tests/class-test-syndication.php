@@ -221,7 +221,7 @@ class Test_Syndication extends WP_UnitTestCase {
 		Syndicate\syndicate_feed( 'https://wordpress.org/news/feed/' );
 
 		// The post should now be expired.
-		$this->assertSame( 'pwp_expired', get_post_status( $post_id ), 'The post should be expired.' );
+		$this->assertSame( 'rss_post_expired', get_post_status( $post_id ), 'The post should be expired.' );
 	}
 
 	/**
@@ -250,12 +250,12 @@ class Test_Syndication extends WP_UnitTestCase {
 		wp_update_post(
 			array(
 				'ID'          => $first_post_id,
-				'post_status' => 'pwp_expired',
+				'post_status' => 'rss_post_expired',
 			)
 		);
 
 		// Ensure the post is expired.
-		$this->assertSame( 'pwp_expired', get_post_status( $first_post_id ), 'The first post should be expired.' );
+		$this->assertSame( 'rss_post_expired', get_post_status( $first_post_id ), 'The first post should be expired.' );
 
 		// Update the feed containing the expired post.
 		self::filter_request( 'https://wordpress.org/news/feed/', 'wp-org-news-latest.rss' );
@@ -390,7 +390,7 @@ class Test_Syndication extends WP_UnitTestCase {
 
 		// Get the post statuses.
 		$post_statuses = wp_list_pluck( $query->posts, 'post_status' );
-		$expected      = array( 'pwp_expired', 'pwp_expired', 'pwp_expired', 'pwp_expired', 'publish' );
+		$expected      = array( 'rss_post_expired', 'rss_post_expired', 'rss_post_expired', 'rss_post_expired', 'publish' );
 
 		// Ensure the updated posts are expired.
 		$this->assertSame( $expected, $post_statuses, 'The updated posts should be expired.' );
@@ -466,7 +466,7 @@ class Test_Syndication extends WP_UnitTestCase {
 		$expired_post  = reset( $expired_posts );
 
 		// Ensure the post is expired.
-		$this->assertSame( 'pwp_expired', get_post_status( $expired_post->ID ), 'The post should be expired.' );
+		$this->assertSame( 'rss_post_expired', get_post_status( $expired_post->ID ), 'The post should be expired.' );
 	}
 
 	/**

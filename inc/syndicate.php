@@ -134,7 +134,7 @@ function unpublished_expired_items( $items, $feed_data, $term_id ) {
 		wp_update_post(
 			array(
 				'ID'          => $post_id,
-				'post_status' => 'pwp_expired',
+				'post_status' => 'rss_post_expired',
 			)
 		);
 	}
@@ -271,13 +271,13 @@ function syndicate_item( $item, $feed_data, $term_id ) {
 		unset( $post_data['post_date_gmt'] );
 
 		/*
-		 * Only update the post status if the current status is pwp_expired.
+		 * Only update the post status if the current status is rss_post_expired.
 		 *
 		 * Expired posts have been re-added to the feed and can be republished,
 		 * other unpublished posts should remain unpublished as they were intentionally
 		 * unpublished from the ingesting site.
 		 */
-		if ( 'pwp_expired' !== $old_post->post_status ) {
+		if ( 'rss_post_expired' !== $old_post->post_status ) {
 			unset( $post_data['post_status'] );
 		} elseif ( ! $ingesting ) {
 			// Do not update expired posts if the feed is not set to ingest.
@@ -308,7 +308,7 @@ function syndicate_item( $item, $feed_data, $term_id ) {
 		if ( ! $ingesting ) {
 			$post_data                = array();
 			$post_data['ID']          = $post_id;
-			$post_data['post_status'] = 'pwp_expired';
+			$post_data['post_status'] = 'rss_post_expired';
 		}
 
 		wp_update_post( $post_data );
