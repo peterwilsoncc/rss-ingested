@@ -1,12 +1,12 @@
-=== WP Plugin Template ===
+=== RSS Ingested ===
 Contributors: peterwilsoncc
 Tags:
 Tested up to: 6.8
 Stable tag: 1.0.0
 License: MIT
-License URI: https://github.com/peterwilsoncc/wp-plugin-template/blob/main/LICENSE
+License URI: https://github.com/peterwilsoncc/rss-ingested/blob/main/LICENSE
 
-Short Description
+Ingest RSS Feeds for Syndication
 
 == Description ==
 

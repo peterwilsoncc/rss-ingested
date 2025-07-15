@@ -1,14 +1,12 @@
 <?php
 /**
- * WP Plugin Template
+ * RSS Ingested
  *
- * @package           WpPluginTemplate
+ * @package           RssIngested
  * @author            Peter Wilson
- * @copyright         2023 Peter Wilson
- * @license           MIT
  */
 
-namespace PWCC\WpPluginTemplate;
+namespace PWCC\RssIngested;
 
 const PLUGIN_VERSION = '1.0.0';
 

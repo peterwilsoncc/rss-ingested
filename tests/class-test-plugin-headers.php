@@ -2,10 +2,10 @@
 /**
  * Test Plugin Readme and PHP Headers
  *
- * @package PWCC\WpPluginTemplate\Tests
+ * @package PWCC\RssIngested\Tests
  */
 
-namespace PWCC\WpPluginTemplate\Tests;
+namespace PWCC\RssIngested\Tests;
 
 use WP_UnitTestCase;
 

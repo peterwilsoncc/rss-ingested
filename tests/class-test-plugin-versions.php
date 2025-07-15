@@ -2,14 +2,14 @@
 /**
  * Test Plugin Versions match.
  *
- * @package PWCC\WpPluginTemplate\Tests
+ * @package PWCC\RssIngested\Tests
  */
 
-namespace PWCC\WpPluginTemplate\Tests;
+namespace PWCC\RssIngested\Tests;
 
 use WP_UnitTestCase;
 
-use const PWCC\WpPluginTemplate\PLUGIN_VERSION;
+use const PWCC\RssIngested\PLUGIN_VERSION;
 
 /**
  * Test Plugin Readme and PHP Headers
