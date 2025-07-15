@@ -11,8 +11,8 @@
  * Plugin Name: RSS Ingested
  * Description: Ingest RSS Feeds for Syndication
  * Version: 1.0.0
- * Requires at least: 6.5
- * Requires PHP: 8.0
+ * Requires at least: 6.8
+ * Requires PHP: 8.1
  * Author: Peter Wilson
  * Author URI: https://peterwilson.cc
  * License: MIT
