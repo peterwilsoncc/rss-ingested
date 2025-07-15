@@ -90,6 +90,38 @@ function get_syndicated_feeds() {
 }
 
 /**
+ * Get the post type for syndicated feeds.
+ *
+ * @return string The post type for syndicated feeds.
+ */
+function get_syndicated_feed_post_type() {
+	/**
+	 * Filters the post type for syndicated feeds.
+	 *
+	 * The post type must be registered if modified from the default
+	 *
+	 * @param string $post_type The post type for syndicated feeds. Defaults to 'rss_syndicated_post'.
+	 */
+	return apply_filters( 'pwcc_rss_ingested_feed_post_type', 'rss_syndicated_post' );
+}
+
+/**
+ * Get the taxonomy used for syndicated sites.
+ *
+ * @return string The taxonomy for syndicated sites.
+ */
+function get_syndicated_site_taxonomy() {
+	/**
+	 * Filters the taxonomy for syndicated sites.
+	 *
+	 * The taxonomy must be registered if modified from the default.
+	 *
+	 * @param string $taxonomy The taxonomy for syndicated sites. Defaults to 'rss_syndicated_site'.
+	 */
+	return apply_filters( 'pwcc_rss_ingested_site_taxonomy', 'rss_syndicated_site' );
+}
+
+/**
  * Get the term IDs for any sites that are not being displayed.
  *
  * @return int[] Array of term IDs for sites that are not being displayed.

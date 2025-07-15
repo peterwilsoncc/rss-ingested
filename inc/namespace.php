@@ -10,6 +10,8 @@
 
 namespace PWCC\RssIngested;
 
+use PWCC\RssIngested\Settings;
+
 const PLUGIN_VERSION = '1.0.0';
 
 /**
@@ -26,6 +28,55 @@ function bootstrap() {
 	add_filter( 'term_link', __NAMESPACE__ . '\\syndicated_site_term_link', 10, 3 );
 	add_filter( 'the_title_rss', __NAMESPACE__ . '\\syndicated_post_title_rss', 10 );
 	add_action( 'init', __NAMESPACE__ . '\\register_expired_post_status' );
+}
+
+/**
+ * Register the custom post type.
+ */
+function register_cpt() {
+	if ( 'rss_syndicated_post' !== Settings\get_syndicated_feed_post_type() ) {
+		// Don't register if the post type is not used.
+		return;
+	}
+
+	register_post_type(
+		'rss_syndicated_post',
+		array(
+			'label'               => __( 'Syndicated Posts', 'rss-ingested' ),
+			'public'              => true,
+			'show_in_rest'        => true,
+			'rest_base'           => 'syndicated_posts',
+			'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+			'rewrite'             => array( 'slug' => 'syndicated-posts' ),
+			'show_in_menu'        => true,
+			'menu_icon'           => 'dashicons-rss',
+			'show_in_admin_bar'   => true,
+			'show_in_nav_menus'   => true,
+			'hierarchical'        => false,
+			'exclude_from_search' => false,
+		)
+	);
+}
+
+function register_custom_taxonomy() {
+	if ( 'rss_syndicated_site' !== Settings\get_syndicated_site_taxonomy() ) {
+		// Don't register if the taxonomy is not used.
+		return;
+	}
+
+	register_taxonomy(
+		'rss_syndicated_site',
+		'rss_syndicated_post',
+		array(
+			'label'             => __( 'Syndicated Sites', 'rss-ingested' ),
+			'public'            => true,
+			'show_in_rest'      => true,
+			'rest_base'         => 'syndicated_sites',
+			'hierarchical'      => true,
+			'show_admin_column' => true,
+			'rewrite'           => array( 'slug' => 'syndicated-site' ),
+		)
+	);
 }
 
 /**
@@ -47,7 +98,6 @@ function register_expired_post_status() {
 		)
 	);
 }
-
 
 /**
  * Remove sites that are no longer being displayed from the post feed.
