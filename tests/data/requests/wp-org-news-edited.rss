@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+>
+
+	<channel>
+		<title>WordPress News</title>
+		<atom:link href="https://wordpress.org/news/feed/" rel="self" type="application/rss+xml" />
+		<link>https://wordpress.org/news</link>
+		<description>The latest news about WordPress and the WordPress community</description>
+		<lastBuildDate>Sat, 15 Feb 2025 03:19:09 +0000</lastBuildDate>
+		<language>en-US</language>
+		<sy:updatePeriod>
+			hourly </sy:updatePeriod>
+		<sy:updateFrequency>
+			1 </sy:updateFrequency>
+		<generator>https://wordpress.org/?v=6.8-alpha-59827</generator>
+
+		<image>
+			<url>https://s.w.org/favicon.ico?2</url>
+			<title>WordPress News</title>
+			<link>https://wordpress.org/news</link>
+			<width>32</width>
+			<height>32</height>
+		</image>
+		<site xmlns="com-wordpress:feed-additions:1">14607090</site>
+		<item>
+			<title>Post One Edited Title</title>
+			<link>https://wordpress.org/news/2024/12/holiday-break/</link>
+
+			<dc:creator><![CDATA[Matt Mullenweg]]></dc:creator>
+			<pubDate>Fri, 20 Dec 2024 00:36:59 +0000</pubDate>
+			<category><![CDATA[General]]></category>
+			<guid isPermaLink="false">https://wordpress.org/news/?p=18328</guid>
+
+			<description><![CDATA[In order to give myself and the many tired volunteers around WordPress.org a break for the holidays, we&#8217;re going to be pausing a few of the free services currently offered: We&#8217;re going to leave things like localization and the forums open because these don&#8217;t require much moderation. As you may have heard, I&#8217;m legally compelled [&#8230;]]]></description>
+			<content:encoded><![CDATA[
+<p>In order to give myself and the many tired volunteers around WordPress.org a break for the holidays, we&#8217;re going to be pausing a few of the free services currently offered:</p>
+
+
+
+<ul class="wp-block-list">
+<li>New account registrations on WordPress.org (clarifying so press doesn&#8217;t confuse this: people can still make their own WordPress installs and accounts)</li>
+
+
+
+<li>New <a href="https://wordpress.org/plugins/">plugin directory</a> submissions</li>
+
+
+
+<li>New plugin reviews</li>
+
+
+
+<li>New <a href="https://wordpress.org/themes/">theme directory</a> submissions</li>
+
+
+
+<li>New <a href="https://wordpress.org/photos/">photo directory</a> submissions</li>
+</ul>
+
+
+
+<p>We&#8217;re going to leave things like localization and the forums open because these don&#8217;t require much moderation.</p>
+
+
+
+<p>As you may have heard, <a href="https://www.theverge.com/2024/12/10/24318350/automattic-restore-wp-engine-access-wordpress">I&#8217;m legally compelled to provide free labor and services to WP Engine thanks to the success of their expensive lawyers</a>, so in order to avoid bothering the court I will say that none of the above applies to WP Engine, so if they need to bypass any of the above please just have your high-priced attorneys talk to my high-priced attorneys and we&#8217;ll arrange access, or just reach out directly to me on Slack and I&#8217;ll fix things for you.</p>
+
+
+
+<p>I hope to find the time, energy, and money to reopen all of this sometime in the new year. Right now much of the time I would spend making WordPress better is being taken up defending against WP Engine&#8217;s legal attacks. Their attacks are against Automattic, but also me individually as the owner of WordPress.org, which means if they win I can be personally liable for millions of dollars of damages.</p>
+
+
+
+<p>If you would like to fund legal attacks against me, I would encourage you to sign up for WP Engine services, <a href="https://wpengine.com/plans/">they have great plans and pricing starting at $50/mo and scaling all the way up to $2,000/mo</a>. If not, you can use <a href="https://wordpress.org/news/2024/10/wp-engine-promotions/">literally any other web host in the world that isn&#8217;t suing me and is offering promotions and discounts for switching away from WP Engine</a>.</p>
+]]></content:encoded>
+
+
+			<post-id xmlns="com-wordpress:feed-additions:1">18328</post-id>
+		</item>
+		<item>
+			<title>State of the Word 2024: Legacy, Innovation, and Community</title>
+			<link>
+				https://wordpress.org/news/2024/12/state-of-the-word-2024-legacy-innovation-and-community/</link>
+
+			<dc:creator><![CDATA[Nicholas Garofalo]]></dc:creator>
+			<pubDate>Mon, 16 Dec 2024 21:28:22 +0000</pubDate>
+			<category><![CDATA[Events]]></category>
+			<category><![CDATA[state of the word]]></category>
+			<guid isPermaLink="false">https://wordpress.org/news/?p=18205</guid>
+
+			<description><![CDATA[Post two edited excerpt]]></description>
+			<content:encoded><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="State of the Word 2024" width="500" height="281" src="https://www.youtube.com/embed/KLybH5YvIPQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<p>On a memorable evening in Tokyo, State of the Word 2024 brought together WordPress enthusiasts from around the world—hundreds in person and millions more online. This event marked the first time State of the Word was hosted in Asia, reflecting the platform&#8217;s growing global reach. The setting couldn’t have been more fitting: a city where tradition and technology coexist in seamless harmony. Tokyo, much like WordPress itself, reflects a powerful blend of legacy and innovation, craftsmanship and technology, and moments of vast scale balanced by serene stillness.</p>
+
+
+
+<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-1 wp-block-group-is-layout-flex">
+<figure class="wp-block-pullquote alignwide has-text-align-center"><blockquote><p>Tokyo is a city you feel.</p><cite>Matt Mullenweg, WordPress Cofounder</cite></blockquote></figure>
+</div>
+
+
+
+<p>During the event, the concept of <em>kansei</em> engineering emerged as a central theme. This Japanese design philosophy seeks to create experiences that go beyond function and aesthetics, focusing on how something feels. As highlighted during the keynote, this principle has quietly influenced WordPress’s development, shaping its design and user experience in ways that resonate on an instinctive level.</p>
+
+
+
+<p>The evening also celebrated Japan’s deep-rooted connection to WordPress. Nearly 21 years ago, Japan became the first country to localize WordPress, long before a formal translation framework existed. It all started with<a href="https://wordpress.org/support/topic/localization-help-needed/"> a single forum post from a user named Otsukare</a>, launching a translation project that helped WordPress become a truly global platform. Seeing how far the Japanese WordPress community has come—both in market share and cultural influence—was a powerful reminder of what shared purpose can achieve.</p>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b96d89&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-182521-8400-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="Photo of Matt exhibiting some of the community's wapuu creations" class="wp-image-18208" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-182521-8400-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-182521-8400-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-182521-8400-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-182521-8400-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-182521-8400-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image: Photo of Matt exhibiting some of the community&#039;s wapuu creations"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<p>Wapuu, WordPress’s beloved mascot, was also born in Japan. What began as a simple idea for a fun and friendly representation of WordPress evolved into a global phenomenon. Thanks to Kazuko Kaneuchi’s generous open-source contribution, Wapuu has been reimagined by WordPress communities worldwide, each version infused with local character. This uniquely Japanese creation has helped make WordPress more welcoming, approachable, and fun wherever it appears.</p>
+
+
+
+<h2 class="wp-block-heading">WordPress Growth in 2024</h2>
+
+
+
+<p>WordPress cofounder Matt Mullenweg highlighted significant achievements that underscored WordPress’s growth, resilience, and expanding global presence in 2024. He shared that WordPress now powers 43.6% of all websites globally. In Japan, WordPress’s influence is even more pronounced, powering 58.5% of all websites. This remarkable statistic reinforces the platform’s enduring role as a cornerstone of the open web and accentuates Japan’s deep-rooted commitment to the WordPress ecosystem and its developers’ significant contributions.</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="260" src="https://i0.wp.com/wordpress.org/news/files/2024/12/marklet-share-world-japan.jpg?resize=1024%2C260&#038;ssl=1" alt="" class="wp-image-18339" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/marklet-share-world-japan.jpg?resize=1024%2C260&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/marklet-share-world-japan.jpg?resize=300%2C76&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/marklet-share-world-japan.jpg?resize=768%2C195&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/marklet-share-world-japan.jpg?resize=1536%2C390&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/marklet-share-world-japan.jpg?resize=2048%2C520&amp;ssl=1 2048w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></figure>
+
+
+
+<p>WordPress sites using languages other than English are expected to surpass English-language sites by 2025. German recently overtook Japanese as the third-most-used language, though Japanese remained close behind. Meanwhile, emerging languages like Farsi experienced rapid adoption, reflecting the platform’s expanding multilingual ecosystem. In Southeast Asia, languages such as Indonesian, Vietnamese, and Thai saw substantial year-over-year growth, signaling broader adoption across diverse regions.</p>
+
+
+
+<p>Core downloads surged to nearly half a billion annually, with the notable releases of WordPress <a href="https://wordpress.org/download/releases/6-5/">6.5</a>, <a href="https://wordpress.org/download/releases/6-6/">6.6</a>, and <a href="https://wordpress.org/download/releases/6-7/">6.7</a>.</p>
+
+
+
+<p>WordPress’s design and development ecosystem flourished as well. Over 1,700 new themes were uploaded in 2024, bringing more than 1,000 block themes to the official repository and reflecting increased interest in modern, flexible site design.</p>
+
+
+
+<p>The plugin ecosystem also saw record-breaking activity this year. Plugin downloads surged toward 2.35 billion, representing a 20% year-over-year increase. Plugin updates exceeded 3 billion and are on track to surpass 3.5 billion by year’s end. Notably, the Plugin Review Team made transformative improvements, drastically reducing the average review wait time. Their efficiency gains were complemented by the launch of the <a href="https://wordpress.org/plugins/plugin-check/">Plugin Check</a> tool, which reduced submission issues by 41% while enabling the team to approve 138% more plugins each week.</p>
+
+
+
+<p>These accomplishments showcase WordPress’s resilience, adaptability, and ever-expanding influence. As the platform continues to evolve, its global community remains at the heart of its success, driving innovation and ensuring that WordPress thrives as the leading tool for building the open web.</p>
+
+
+
+<div class="wp-block-group has-off-white-2-background-color has-background is-layout-flow wp-block-group-is-layout-flow" style="padding-top:var(--wp--preset--spacing--40);padding-right:0;padding-bottom:var(--wp--preset--spacing--40);padding-left:0">
+<p class="has-text-align-center">Help shape the future of WordPress: Join a contributor team today!</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-2 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link wp-element-button" href="https://make.wordpress.org/" target="_blank" rel="noreferrer noopener">Make WordPress</a></div>
+</div>
+</div>
+
+
+
+<h2 class="wp-block-heading">Advancing the Platform</h2>
+
+
+
+<p>WordPress lead architect, Matías Ventura, highlighted WordPress’s evolution through the lenses of writing, design, building, and development, demoing various pieces of new and forthcoming enhancements.</p>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9795e&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" src="https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.059.jpeg?resize=1024%2C576&#038;ssl=1" alt="Write, Build, Design, Develop" class="wp-image-18219" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.059.jpeg?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.059.jpeg?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.059.jpeg?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.059.jpeg?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.059.jpeg?w=1920&amp;ssl=1 1920w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image: Write, Build, Design, Develop"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<h3 class="wp-block-heading">Writing</h3>
+
+
+
+<p>The writing experience in WordPress saw notable advancements this year, with an improved distraction-free mode that helps users to focus on content creation without interface distractions. Now you can directly select the image itself to drag and drop it where you want, even enabling on-the-fly gallery creation when you drop images next to each other.</p>
+
+
+
+<p>Additionally, the introduction of block-level comments in the editor, currently an experimental feature, promises to reshape collaborative workflows by enabling teams to leave notes directly on blocks.</p>
+
+
+
+<p>These enhancements all work together to make writing, composing, and editing in WordPress feel more fluid, personal, and pleasant than ever.</p>
+
+
+
+<h3 class="wp-block-heading">Design</h3>
+
+
+
+<p>Along with new default theme Twenty Twenty-Five, more than 1,000 block themes offer tailored starting points for different site types, including portfolios, blogs, and business sites. Designers can also utilize the improved Style Book for a comprehensive view of their site’s appearance, ensuring a smooth design process.</p>
+
+
+
+<p>Design work isn’t just about aesthetics—it’s also about creating the right environment and guardrails. It’s important that users can interact with their site, add content, replace media, and choose sections without needing to know the layout details. We’re implementing better default experiences to help you focus exclusively on the content or on the design, depending on your needs at the moment.&nbsp;</p>
+
+
+
+<p>This all works seamlessly with the zoom-out view, where users can compose content using patterns without having to set up every individual block. Having a bird’s-eye view of your site can really help you gain a different perspective.</p>
+
+
+
+<p>These design capabilities scale with you as your WordPress projects grow. WordPress&#8217;s approach to design is systematic: blocks combine to form patterns, patterns form templates, and templates help separate content from presentation.</p>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9810a&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" src="https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.037.jpeg?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-18302" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.037.jpeg?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.037.jpeg?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.037.jpeg?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.037.jpeg?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/sotw-2024_keynote_vFINALFINAL-english.037.jpeg?w=1920&amp;ssl=1 1920w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<h3 class="wp-block-heading">Building</h3>
+
+
+
+<p>WordPress’s content management capabilities allow working at scale and across teams. Central to this is the introduction of Block Bindings, which merge the flexibility of blocks with the structured power of meta fields. This feature allows block attributes to be directly linked to data sources like post meta, reducing the need for custom blocks while creating deeper, more dynamic content relationships. The familiar block interface remains intact, making complex data management feel seamless. This connects naturally with our broader work on Data Views for post types and meta fields.&nbsp;</p>
+
+
+
+<p>These updates reinforce WordPress’s role as a powerful content management system by connecting its core primitives—blocks, post types, taxonomies, and meta fields—more intuitively.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">Development</h3>
+
+
+
+<p>Lastly, Matías showcased a range of groundbreaking tools that empower WordPress developers and streamline their workflows. One of the highlights was the new Templates API, which has simplified the process of registering and managing custom templates. Future updates to the API will allow users to register and activate templates seamlessly, enabling dynamic site customizations such as scheduling different homepage templates for special events or swapping category archives during campaigns. This flexible approach offers developers greater creative control in a standardized way.&nbsp;</p>
+
+
+
+<p>The session also explored the Interactivity API, designed to deliver fast, seamless website experiences by enabling server-rendered interactivity within WordPress. Unlike JavaScript-heavy frameworks, this technology keeps everything within WordPress’s existing ecosystem, bridging the gap between developers and content creators. Attendees saw live demos showcasing instant search, pagination, and commenting—all without page reloads—while maintaining a perfect performance score of 100 on Lighthouse. In addition, it was announced that responsive controls will receive significant attention, with new features being explored, like block visibility by breakpoint and adding min/max controls to the columns block.</p>
+
+
+
+<p>The WordPress Playground also emerged as a game-changer, allowing users to spin up WordPress sites directly in their browsers, experiment with Blueprints, and manage projects offline. With improved GitHub integration and expanded documentation, WordPress developers now have a more accessible and powerful toolkit than ever before.</p>
+
+
+
+<h2 class="wp-block-heading">An AI Future</h2>
+
+
+
+<p>Returning to the stage, Matt noted that Gutenberg’s evolution is paving the way for AI-powered site building while keeping creative control in users’ hands. A recent speed building challenge on WordPress’s YouTube channel showcased this potential, with <a href="https://profiles.wordpress.org/ndiego/">Nick Diego</a> using AI-assisted tools and <a href="https://profiles.wordpress.org/welcher/">Ryan Welcher</a> building manually. While the AI-assisted approach won, the key takeaway was that AI isn’t here to replace developers but to enhance creativity and efficiency.</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="AI Takes On HUMAN in WordPress Speed Build Showdown &#x1f525;" width="500" height="281" src="https://www.youtube.com/embed/vjw6KWahFlk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<h2 class="wp-block-heading">Community Impact and Global Reach</h2>
+
+
+
+<p>When WordPress Executive Director Mary Hubbard took the stage, she emphasized WordPress’s commitment to its open-source mission and the power of its global community. Mary shared her passion for defending WordPress’s principles, reaffirming that when users choose WordPress, they should receive the authentic, community-driven experience that the platform stands for. This commitment to clarity, trust, and open-source integrity is central to ensuring WordPress’s long-term sustainability and success.</p>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b989de&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193636-0177_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="Photo of Mary Hubbard, WordPress Executive Director" class="wp-image-18227" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193636-0177_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193636-0177_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193636-0177_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193636-0177_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193636-0177_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image: Photo of Mary Hubbard, WordPress Executive Director"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button><figcaption class="wp-element-caption">Mary Hubbard, WordPress Executive Director</figcaption></figure>
+
+
+
+<p>In 2024, WordPress’s global influence surged through expanded educational programs, developer contributions, and grassroots initiatives. The platform’s social media following grew to 2.3 million, while major events like WordCamps and live-streamed gatherings attracted millions of attendees and viewers, connecting people worldwide.</p>
+
+
+
+<p><a href="https://learn.wordpress.org/">Learn WordPress</a> introduced Structured Learning Pathways, offering tailored tracks for beginners and developers, fostering a growing network of creators eager to learn and contribute. Grassroots programs flourished, with WP Campus Connect bringing WordPress education to Indian colleges and innovation competitions in Uganda empowering young creators. In Latin America, the Community Reactivation Project reignited meetups across nine cities, fostering a network of over 150 active members and setting the stage for three new WordCamps in 2025.</p>
+
+
+
+<p>WordPress’s efforts also advanced through <a href="https://openverse.org/">Openverse</a>, which expanded its free content library to 884 million images and 4.2 million audio files, serving millions of creators worldwide and supporting WordPress’s broader mission of democratizing publishing.</p>
+
+
+
+<p>Whether through educational platforms, developer-driven innovation, or community-led projects, WordPress’s ecosystem continues to nurture shared learning, creativity, and collaboration, ensuring its growth and relevance for future generations.</p>
+
+
+
+<h2 class="wp-block-heading">Japanese Community Highlights</h2>
+
+
+
+<p><a href="https://profiles.wordpress.org/nukaga/">Junko Fukui Nukaga</a>—Community Team rep, program manager, and WordCamp organizer—noted that WordPress&#8217;s prominence in Japan contributes to an economy now estimated to exceed 100 billion yen.</p>
+
+
+
+<p>In October of 2024, the Japanese WordPress community celebrated DigitalCube’s IPO on the Tokyo PRO Market, marking a milestone for the local WordPress ecosystem. Major contributors like Takayuki Miyoshi’s <a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> plugin surpassed 10 million active users, while companies like Sakura Internet and XServer built specialized WordPress infrastructure.</p>
+
+
+
+<p>Community events in Japan have also flourished, with 189 local meetups held throughout the year, fueled by dedicated volunteers and organizers. Translation Night gatherings have ensured WordPress remains accessible to Japanese users, reflecting a thriving collaborative spirit.</p>
+
+
+
+<p>Matt gave special recognition to Japan’s standout contributor, <a href="https://profiles.wordpress.org/wildworks/">Aki Hamano</a>, a Core Committer whose exceptional efforts elevated WordPress development over the past year. Hamano-san made an impressive 774 contributions to WordPress core, earning 162 props for WordPress 6.5, rising to 274 props for 6.6 as the second-highest contributor, and securing the top spot with 338 props for 6.7.Other notable Japanese contributors included <a href="https://profiles.wordpress.org/atachibana/">Akira Tachibana</a>, an active Docs Team member, and Nukaga, recognized for her exceptional community organizing efforts. Additionally, 13 Japanese contributors supported 5.4% of WordPress 6.6 development, showcasing the country’s growing influence in the WordPress ecosystem.</p>
+
+
+
+<h2 class="wp-block-heading">Data Liberation</h2>
+
+
+
+<p>Reflecting on the progress since the initiative&#8217;s launch last year, the focus remained on ensuring that WordPress not only becomes more powerful but also embodies freedom in its deepest sense—the freedom to move content anywhere, collaborate without limits, and create without constraints. This vision extends beyond individual sites to a broader web where content flows seamlessly across platforms, enabling unrestricted creativity and innovation.</p>
+
+
+
+<p>One compelling example demonstrated how easily ePub files could be imported into a WordPress site, integrating seamlessly with existing designs. This represents the initiative’s broader goal: making content migration and integration effortless. WordPress Playground plays a critical role in this vision by enabling easy site migration through a simple browser extension. With Playground as a staging area, migrating and adapting sites becomes intuitive and accessible.</p>
+
+
+
+<h2 class="wp-block-heading">Q&amp;A</h2>
+
+
+
+<p>The floor was opened to questions in both Japanese and English.</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="State of the Word 2024 Q&amp;A" width="500" height="281" src="https://www.youtube.com/embed/XPhQFSAvKVw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<p>Questions from the audience, including <a href="https://en.wikipedia.org/wiki/Tokyo_Vice"><em>Tokyo Vice</em></a> author Jake Adelstein, covered the future of blogging, WordPress performance, the impact of AI search, and what democratizing publishing means today. Matt shared his excitement for more open platforms such as Mastodon and Bluesky, as well as his recommendations for optimizing your site for both humans and AI. A common thread throughout was that a personal website is an important part of your digital identity, and WordPress allows you to<a href="https://playground.wordpress.net/?plugin=piano-block&amp;blueprint-url=https%3A%2F%2Fwordpress.org%2Fplugins%2Fwp-json%2Fplugins%2Fv1%2Fplugin%2Fpiano-block%2Fblueprint.json%3Frev%3D3166994%26lang%3D"> express yourself in fun and unique ways</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Panels</h2>
+
+
+
+<p>After attendees enjoyed a special performance by the pianist, Takai-san, industry leaders, creators, and innovators took the stage for panel discussions about the present and future of WordPress, moderated by Mary Hubbard.</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="State of the Word 2024 Panel Discussions" width="500" height="281" src="https://www.youtube.com/embed/Qt5FOQYX1nE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<h3 class="wp-block-heading">Publishing in the Open</h3>
+
+
+
+<p>Featuring:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Mieko Kawakami, Japanese Author and Poet&nbsp;</li>
+
+
+
+<li>Craig Mod, Author of Things Become Other Things&nbsp;</li>
+
+
+
+<li>Matt Mullenweg, WordPress Cofounder and Automattic CEO</li>
+</ul>
+
+
+
+<p>This first panel explored the transformative power of open-source publishing. Panelists shared insights into how open publishing has influenced their creative journeys, expanded audience engagement, and shaped storytelling across cultural boundaries.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Publishing in the open has defined what I’ve done. All the best connections I’ve made in live have been the result of publishing in the open. &#8211; Craig Mod</p>
+</blockquote>
+
+
+
+<p>Publishing in the open, like WordPress, is about building community, mutual connections, and putting power back into the hands of creators.</p>
+
+
+
+<h3 class="wp-block-heading">The Future of WordPress in Japan and Beyond</h3>
+
+
+
+<p>Featuring:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Hajime Ogushi, mgn CEO</li>
+
+
+
+<li>Genki Taniguchi, SAKURA internet Inc. Senior Director</li>
+
+
+
+<li>Matt Mullenweg, WordPress Cofounder and Automattic CEO</li>
+</ul>
+
+
+
+<p>The second discussion highlighted WordPress&#8217;s remarkable growth in Japan and its broader global impact. The discussion covered the drivers behind Japan&#8217;s adoption of WordPress, its thriving ecosystem of WordPress-based businesses, and emerging trends in web development.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Compared to other CMSs the WordPress Japanese is much easier to use. &#8211; Hajime Ogushi</p>
+</blockquote>
+
+
+
+<p>The group discussed plugins such as <a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a>, the affordability of hosting WordPress, and local meetups and events</p>
+
+
+
+<h2 class="wp-block-heading">Closing</h2>
+
+
+
+<p>Thank you to all the guests who joined us on stage, those who ventured to Tokyo, and everyone who tuned in from around the world. Today’s event showcased how a free and infinitely flexible platform, an active global community, open innovation, and a commitment to a fully democratized web make us better at being who we are.</p>
+
+
+
+<p>From Tokyo, Arigatou Gozaimashita!</p>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-0 is-cropped is-style-rectangular wp-block-gallery-2 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9a2e8&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18249" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-202835-8841-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18249" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-202835-8841-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-202835-8841-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-202835-8841-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-202835-8841-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-202835-8841-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9a75c&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18262" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-164917-7983-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18262" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-164917-7983-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-164917-7983-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-164917-7983-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-164917-7983-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-164917-7983-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9abaa&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18274" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-163201-7815-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18274" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-163201-7815-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-163201-7815-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-163201-7815-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-163201-7815-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-163201-7815-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9afb7&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18252" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-140851-0095-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18252" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-140851-0095-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-140851-0095-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-140851-0095-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-140851-0095-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-140851-0095-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9b3d3&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18258" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-135950-0093-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18258" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-135950-0093-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-135950-0093-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-135950-0093-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-135950-0093-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-135950-0093-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9b83d&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18240" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-142237-0135-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18240" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-142237-0135-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-142237-0135-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-142237-0135-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-142237-0135-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-142237-0135-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9be6e&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18260" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-181648-7911-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18260" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-181648-7911-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-181648-7911-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-181648-7911-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-181648-7911-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-181648-7911-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9c312&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18251" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-203524-8925-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18251" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-203524-8925-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-203524-8925-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-203524-8925-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-203524-8925-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-203524-8925-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9c774&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="683" height="1024" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18229" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-190404-0124_web2k.jpg?resize=683%2C1024&#038;ssl=1" alt="" class="wp-image-18229" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-190404-0124_web2k.jpg?resize=683%2C1024&amp;ssl=1 683w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-190404-0124_web2k.jpg?resize=200%2C300&amp;ssl=1 200w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-190404-0124_web2k.jpg?resize=768%2C1151&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-190404-0124_web2k.jpg?resize=1025%2C1536&amp;ssl=1 1025w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-190404-0124_web2k.jpg?w=1334&amp;ssl=1 1334w" sizes="auto, (max-width: 683px) 100vw, 683px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9cbb4&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18230" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193131-0170_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18230" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193131-0170_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193131-0170_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193131-0170_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193131-0170_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-193131-0170_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9d00a&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18233" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194151-8562-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18233" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194151-8562-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194151-8562-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194151-8562-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194151-8562-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194151-8562-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9d3f9&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18236" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194444-0195_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18236" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194444-0195_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194444-0195_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194444-0195_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194444-0195_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-194444-0195_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9d803&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="683" height="1024" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18231" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200909-0238_web2k.jpg?resize=683%2C1024&#038;ssl=1" alt="" class="wp-image-18231" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200909-0238_web2k.jpg?resize=683%2C1024&amp;ssl=1 683w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200909-0238_web2k.jpg?resize=200%2C300&amp;ssl=1 200w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200909-0238_web2k.jpg?resize=768%2C1151&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200909-0238_web2k.jpg?resize=1025%2C1536&amp;ssl=1 1025w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200909-0238_web2k.jpg?w=1334&amp;ssl=1 1334w" sizes="auto, (max-width: 683px) 100vw, 683px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9dc22&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18228" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200404-0226_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18228" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200404-0226_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200404-0226_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200404-0226_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200404-0226_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-200404-0226_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9e017&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18272" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210737-9358-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18272" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210737-9358-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210737-9358-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210737-9358-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210737-9358-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210737-9358-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9e438&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18305" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-211905-9455-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18305" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-211905-9455-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-211905-9455-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-211905-9455-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-211905-9455-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-211905-9455-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9e8d7&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18269" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204404-9012-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18269" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204404-9012-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204404-9012-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204404-9012-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204404-9012-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204404-9012-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9ed18&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18257" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204317-8995-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18257" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204317-8995-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204317-8995-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204317-8995-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204317-8995-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204317-8995-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9f18a&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18271" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210835-9366-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18271" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210835-9366-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210835-9366-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210835-9366-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210835-9366-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210835-9366-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9f5f8&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18279" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-212042-9462-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18279" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-212042-9462-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-212042-9462-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-212042-9462-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-212042-9462-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-212042-9462-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36b9fc39&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18275" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210855-9369-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18275" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210855-9369-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210855-9369-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210855-9369-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210855-9369-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-210855-9369-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36ba0069&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18265" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204253-8984-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18265" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204253-8984-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204253-8984-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204253-8984-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204253-8984-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-204253-8984-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36ba0487&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18282" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213938-9563-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18282" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213938-9563-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213938-9563-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213938-9563-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213938-9563-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213938-9563-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36ba12c4&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18280" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213231-9494-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18280" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213231-9494-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213231-9494-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213231-9494-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213231-9494-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213231-9494-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36ba17ca&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18268" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213105-9483-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18268" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213105-9483-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213105-9483-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213105-9483-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213105-9483-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213105-9483-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36ba1c8b&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18266" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213722-60568-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18266" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213722-60568-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213722-60568-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213722-60568-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213722-60568-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213722-60568-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;67b3c36ba2107&quot;}" data-wp-interactive="core/image" class="wp-block-image size-large wp-lightbox-container"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="18281" src="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213349-60543-_web2k.jpg?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-18281" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213349-60543-_web2k.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213349-60543-_web2k.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213349-60543-_web2k.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213349-60543-_web2k.jpg?resize=1536%2C1025&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/20241216-Automattic-213349-60543-_web2k.jpg?w=2000&amp;ssl=1 2000w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge image"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on-async--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+</figure>
+
+
+
+<p>For those interested in exploring past State of the Word keynotes, WordPress has curated a comprehensive YouTube playlist featuring keynotes from previous years. Watch them all here:<a href="https://www.youtube.com/playlist?list=PL1pJFUVKQ7ES1piZxljCvMTJCYpVBnwYU" target="_blank" rel="noreferrer noopener"> State of the Word YouTube Playlist</a>. Be sure to mark your calendars for major WordPress events in 2025: <a href="https://asia.wordcamp.org/2025/" target="_blank" rel="noreferrer noopener">WordCamp Asia</a> (Manila, Philippines), <a href="https://europe.wordcamp.org/2025/" target="_blank" rel="noreferrer noopener">WordCamp Europe</a> (Basel, Switzerland), and <a href="https://us.wordcamp.org/2025/" target="_blank" rel="noreferrer noopener">WordCamp US</a> (Portland, Oregon, USA).</p>
+]]></content:encoded>
+
+
+			<post-id xmlns="com-wordpress:feed-additions:1">18205</post-id>
+		</item>
+		<item>
+			<title>Write Books With the Block Editor</title>
+			<link>https://wordpress.org/news/2024/12/write-books-with-the-block-editor/</link>
+
+			<dc:creator><![CDATA[Ella]]></dc:creator>
+			<pubDate>Mon, 16 Dec 2024 08:36:57 +0000</pubDate>
+			<category><![CDATA[General]]></category>
+			<guid isPermaLink="false">https://wordpress.org/news/?p=18176</guid>
+
+			<description><![CDATA[If you need a little push to start writing this winter, in the comfort of your familiar editor, here it is! You can now use the Block Editor to create electronic books and other documents—all completely offline. What a full circle moment for Gutenberg! The Block Editor contains so many features I miss when writing [&#8230;]]]></description>
+			<content:encoded><![CDATA[
+<p>Post three edited content</p>
+]]></content:encoded>
+
+
+			<post-id xmlns="com-wordpress:feed-additions:1">18176</post-id>
+		</item>
+		<item>
+			<title>Openverse.org: A Sight for Sore Eyes</title>
+			<link>https://wordpress.org/news/2024/12/post-four-edited-permalink/</link>
+
+			<dc:creator><![CDATA[Brett McSherry]]></dc:creator>
+			<pubDate>Wed, 11 Dec 2024 17:45:50 +0000</pubDate>
+			<category><![CDATA[General]]></category>
+			<guid isPermaLink="false">https://wordpress.org/news/?p=18168</guid>
+
+			<description><![CDATA[Openverse.org, the vibrant platform for openly licensed media, has introduced a sleek and modern Dark Mode feature. This new site theme is designed to enhance users&#8217; comfort and style as they explore the extensive library of creative resources. Whether for late-night browsing or simply a preference for darker aesthetics, Dark Mode makes engaging with Openverse [&#8230;]]]></description>
+			<content:encoded><![CDATA[
+<figure class="wp-block-image size-large"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="576" src="https://i0.wp.com/wordpress.org/news/files/2024/12/Dark-home-with-yellow-background.png?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-18196" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/Dark-home-with-yellow-background.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/Dark-home-with-yellow-background.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/Dark-home-with-yellow-background.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/Dark-home-with-yellow-background.png?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/Dark-home-with-yellow-background.png?resize=2048%2C1152&amp;ssl=1 2048w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></figure>
+
+
+
+<p><a href="https://openverse.org/">Openverse.org</a>, the vibrant platform for openly licensed media, has introduced a sleek and modern Dark Mode feature. This new site theme is designed to enhance users&#8217; comfort and style as they explore the extensive library of creative resources. Whether for late-night browsing or simply a preference for darker aesthetics, Dark Mode makes engaging with Openverse easier on the eyes and more personalized than ever.</p>
+
+
+
+<p>By reducing screen brightness in low-light settings, Dark Mode offers a more relaxed viewing experience, helping to minimize eye strain. It also caters to users with light sensitivity, creating a more inclusive browsing environment. This thoughtful addition underscores Openverse’s commitment to delivering tools that are as functional as they are visually appealing.</p>
+
+
+
+<div class="wp-block-jetpack-slideshow" data-effect="slide"><div class="wp-block-jetpack-slideshow_container swiper-container"><ul class="wp-block-jetpack-slideshow_swiper-wrapper swiper-wrapper"><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="573" alt="" class="wp-block-jetpack-slideshow_image wp-image-18188" data-id="18188" src="https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-results-and-player-2.png?resize=1024%2C573&#038;ssl=1" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-results-and-player-2.png?resize=1024%2C573&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-results-and-player-2.png?resize=300%2C168&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-results-and-player-2.png?resize=768%2C430&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-results-and-player-2.png?resize=1536%2C860&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-results-and-player-2.png?resize=2048%2C1147&amp;ssl=1 2048w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="545" alt="" class="wp-block-jetpack-slideshow_image wp-image-18189" data-id="18189" src="https://i0.wp.com/wordpress.org/news/files/2024/12/Search-results-switcher-2.png?resize=1024%2C545&#038;ssl=1" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/Search-results-switcher-2.png?resize=1024%2C545&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/Search-results-switcher-2.png?resize=300%2C160&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/Search-results-switcher-2.png?resize=768%2C409&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/Search-results-switcher-2.png?resize=1536%2C817&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/Search-results-switcher-2.png?resize=2048%2C1090&amp;ssl=1 2048w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="553" alt="" class="wp-block-jetpack-slideshow_image wp-image-18195" data-id="18195" src="https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-single-page.png?resize=1024%2C553&#038;ssl=1" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-single-page.png?resize=1024%2C553&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-single-page.png?resize=300%2C162&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-single-page.png?resize=768%2C415&amp;ssl=1 768w, https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-single-page.png?resize=1536%2C829&amp;ssl=1 1536w, https://i0.wp.com/wordpress.org/news/files/2024/12/Audio-single-page.png?resize=2048%2C1106&amp;ssl=1 2048w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></figure></li></ul><a class="wp-block-jetpack-slideshow_button-prev swiper-button-prev swiper-button-white" role="button"></a><a class="wp-block-jetpack-slideshow_button-next swiper-button-next swiper-button-white" role="button"></a><a aria-label="Pause Slideshow" class="wp-block-jetpack-slideshow_button-pause" role="button"></a><div class="wp-block-jetpack-slideshow_pagination swiper-pagination swiper-pagination-white"></div></div></div>
+
+
+
+<p>The release of Dark Mode is part of Openverse’s broader effort to innovate and adapt to the needs of its growing community. From the thoughtful interface design to the careful attention to accessibility, every detail was crafted to reflect Openverse’s mission of empowering creativity. By embracing modern frontend implementations like Dark Mode without compromising usability or accessibility, Openverse continues to grow while honoring the brand’s essence. In addition, this update lays the groundwork for future developments aimed at providing even more customization options and improved user experiences.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><em>“Dark Mode marks an exciting step forward for Openverse. We designed and implemented a new user interface that keeps the brand&#8217;s essence while providing the same search experience. We’re thrilled to see how this feature fits within users&#8217; preferences and enhances the creative journey.”&nbsp; – Francisco Vera. Designer</em></p>
+</blockquote>
+
+
+
+<p></p>
+
+
+
+<figure class="wp-block-image size-large"><img data-recalc-dims="1" loading="lazy" decoding="async" width="1024" height="576" src="https://i0.wp.com/wordpress.org/news/files/2024/12/Theme-switcher-flow.gif?resize=1024%2C576&#038;ssl=1" alt="" class="wp-image-18174" srcset="https://i0.wp.com/wordpress.org/news/files/2024/12/Theme-switcher-flow.gif?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/wordpress.org/news/files/2024/12/Theme-switcher-flow.gif?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/wordpress.org/news/files/2024/12/Theme-switcher-flow.gif?resize=768%2C432&amp;ssl=1 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></figure>
+
+
+
+<p>Ready to explore Openverse in a whole new light? Head to <a href="https://openverse.org/">Openverse.org</a> today and look for the Dark Mode toggle in the site footer.</p>
+]]></content:encoded>
+
+
+			<post-id xmlns="com-wordpress:feed-additions:1">18168</post-id>
+		</item>
+		<item>
+			<title>WordPress 6.7.1 Maintenance Release</title>
+			<link>https://wordpress.org/news/2024/11/wordpress-6-7-1-maintenance-release/</link>
+
+			<dc:creator><![CDATA[Jonathan Desrosiers]]></dc:creator>
+			<pubDate>Thu, 21 Nov 2024 14:56:31 +0000</pubDate>
+			<category><![CDATA[Releases]]></category>
+			<guid isPermaLink="false">https://wordpress.org/news/?p=18096</guid>
+
+			<description><![CDATA[WordPress 6.7.1 is now available! This minor release features 16 bug fixes throughout Core and the Block Editor. WordPress 6.7.1 is a fast-follow release with a strict focus on bugs introduced in WordPress 6.7. The next major release will be version 6.8, planned for April 2025. If you have sites that support automatic background updates, [&#8230;]]]></description>
+			<content:encoded><![CDATA[
+<h2 class="wp-block-heading">WordPress 6.7.1 is now available!</h2>
+
+
+
+<p>This minor release features 16 bug fixes <a href="https://core.trac.wordpress.org/query?resolution=fixed&amp;milestone=6.7.1&amp;group=component&amp;col=id&amp;col=summary&amp;col=milestone&amp;col=owner&amp;col=type&amp;col=status&amp;col=priority&amp;order=priority">throughout Core</a> and <a href="https://github.com/WordPress/wordpress-develop/pull/7851">the Block Editor</a>.</p>
+
+
+
+<p>WordPress 6.7.1 is a fast-follow release with a strict focus on bugs introduced in WordPress 6.7. The next major release will be <a href="https://make.wordpress.org/core/6-8/">version 6.8</a>, <a href="https://make.wordpress.org/core/2024/11/19/proposal-major-releases-for-2025/">planned for April 2025</a>.</p>
+
+
+
+<p>If you have sites that support automatic background updates, the update process will begin automatically.</p>
+
+
+
+<p>You can <a href="https://wordpress.org/wordpress-6.7.1.zip">download WordPress 6.7.1 from WordPress.org</a>, or visit your WordPress Dashboard, click “Updates”, and then click “Update Now”.</p>
+
+
+
+<p>For more information on this release, please <a href="https://wordpress.org/support/wordpress-version/version-6-7-1">visit the HelpHub site</a>. You can find a summary of the maintenance updates in this release in the <a href="https://make.wordpress.org/core/?p=116365">Release Candidate announcement</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Thank you to these WordPress contributors</h2>
+
+
+
+<p class="is-style-default">This release was led by <a href="https://profiles.wordpress.org/desrosj/">Jonathan Desrosiers</a> and <a href="https://profiles.wordpress.org/cbravobernal/">Carlos Bravo</a>.</p>
+
+
+
+<p class="is-style-default">WordPress 6.7.1 would not have been possible without the contributions of the following people. Their asynchronous coordination to deliver maintenance fixes into a stable release is a testament to the power and capability of the WordPress community.</p>
+
+
+
+<p><a href="https://profiles.wordpress.org/abcsun/">abcsun</a>, <a href="https://profiles.wordpress.org/adamsilverstein/">Adam Silverstein</a>, <a href="https://profiles.wordpress.org/ahsankhan316/">Ahsan Khan</a>, <a href="https://profiles.wordpress.org/wildworks/">Aki Hamano</a>, <a href="https://profiles.wordpress.org/albigdd/">Alexander Bigga</a>, <a href="https://profiles.wordpress.org/azaozz/">Andrew Ozz</a>, <a href="https://profiles.wordpress.org/ankitkumarshah/">Ankit Kumar Shah</a>, <a href="https://profiles.wordpress.org/ant1busted/">Antoine</a>, <a href="https://profiles.wordpress.org/bluantinoo/">bluantinoo</a>, <a href="https://profiles.wordpress.org/cbravobernal/">Carlos Bravo</a>, <a href="https://profiles.wordpress.org/poena/">Carolina Nymark</a>, <a href="https://profiles.wordpress.org/charleslf/">charleslf</a>, <a href="https://profiles.wordpress.org/apermo/">Christoph Daum</a>, <a href="https://profiles.wordpress.org/get_dave/">David Smith</a>, <a href="https://profiles.wordpress.org/dhewercorus/">dhewercorus</a>, <a href="https://profiles.wordpress.org/dhruvang21/">Dhruvang21</a>, <a href="https://profiles.wordpress.org/dilipbheda/">Dilip Bheda</a>, <a href="https://profiles.wordpress.org/dooperweb/">dooperweb</a>, <a href="https://profiles.wordpress.org/im3dabasia1/">Eshaan Dabasiya</a>, <a href="https://profiles.wordpress.org/flixos90/">Felix Arntz</a>, <a href="https://profiles.wordpress.org/finntown/">finntown</a>, <a href="https://profiles.wordpress.org/firoz2456/">Firoz Sabaliya</a>, <a href="https://profiles.wordpress.org/mamaduka/">George Mamadashvili</a>, <a href="https://profiles.wordpress.org/glynnquelch/">glynnquelch</a>, <a href="https://profiles.wordpress.org/gziolo/">Greg Ziółkowski</a>, <a href="https://profiles.wordpress.org/abcd95/">Himanshu Pathak</a>, <a href="https://profiles.wordpress.org/jagirbahesh/">jagirbahesh</a>, <a href="https://profiles.wordpress.org/jsnajdr/">Jarda Snajdr</a>, <a href="https://profiles.wordpress.org/audrasjb/">Jb Audras</a>, <a href="https://profiles.wordpress.org/jeffpaul/">Jeffrey Paul</a>, <a href="https://profiles.wordpress.org/joedolson/">Joe Dolson</a>, <a href="https://profiles.wordpress.org/joemcgill/">Joe McGill</a>, <a href="https://profiles.wordpress.org/johnbillion/">John Blackbourn</a>, <a href="https://profiles.wordpress.org/desrosj/">Jonathan Desrosiers</a>, <a href="https://profiles.wordpress.org/jonsurrell/">Jon Surrell</a>, <a href="https://profiles.wordpress.org/juliemoynat/">Julie Moynat</a>, <a href="https://profiles.wordpress.org/juliobox/">Julio Potier</a>, <a href="https://profiles.wordpress.org/laurelfulford/">laurelfulford</a>, <a href="https://profiles.wordpress.org/leecollings/">Lee Collings</a>, <a href="https://profiles.wordpress.org/0mirka00/">Lena Morita</a>, <a href="https://profiles.wordpress.org/luisherranz/">luisherranz</a>, <a href="https://profiles.wordpress.org/mmaattiiaass/">Matias Benedetto</a>, <a href="https://profiles.wordpress.org/mayanktripathi32/">Mayank Tripathi</a>, <a href="https://profiles.wordpress.org/czapla/">Michal Czaplinski</a>, <a href="https://profiles.wordpress.org/mcsf/">Miguel Fonseca</a>, <a href="https://profiles.wordpress.org/369work/">miroku</a>, <a href="https://profiles.wordpress.org/mukesh27/">Mukesh Panchal</a>, <a href="https://profiles.wordpress.org/narenin/">Narendra Sishodiya</a>, <a href="https://profiles.wordpress.org/ntsekouras/">Nik Tsekouras</a>, <a href="https://profiles.wordpress.org/domainsupport/">Oliver Campion</a>, <a href="https://profiles.wordpress.org/swissspidy/">Pascal Birchler</a>, <a href="https://profiles.wordpress.org/peterwilsoncc/">Peter Wilson</a>, <a href="https://profiles.wordpress.org/ramonopoly/">ramonopoly</a>, <a href="https://profiles.wordpress.org/ravigadhiyawp/">Ravi Gadhiya</a>, <a href="https://profiles.wordpress.org/rcreators/">Rishi Mehta</a>, <a href="https://profiles.wordpress.org/room34/">room34</a>, <a href="https://profiles.wordpress.org/roytanck/">Roy Tanck</a>, <a href="https://profiles.wordpress.org/looswebstudio/">Ryo</a>, <a href="https://profiles.wordpress.org/sailpete/">sailpete</a>, <a href="https://profiles.wordpress.org/sainathpoojary/">Sainath Poojary</a>, <a href="https://profiles.wordpress.org/sarthaknagoshe2002/">Sarthak Nagoshe</a>, <a href="https://profiles.wordpress.org/sergeybiryukov/">Sergey Biryukov</a>, <a href="https://profiles.wordpress.org/sirlouen/">SirLouen</a>, <a href="https://profiles.wordpress.org/sppramodh/">S P Pramodh</a>, <a href="https://profiles.wordpress.org/sabernhardt/">Stephen Bernhardt</a>, <a href="https://profiles.wordpress.org/stimul/">stimul</a>, <a href="https://profiles.wordpress.org/sukhendu2002/">Sukhendu Sekhar Guria</a>, <a href="https://profiles.wordpress.org/tigriweb/">TigriWeb</a>, <a href="https://profiles.wordpress.org/timwhitlock/">Tim W</a>, <a href="https://profiles.wordpress.org/tobifjellner/">tobifjellner (Tor-Bjorn &#8220;Tobi&#8221; Fjellner)</a>, <a href="https://profiles.wordpress.org/twvania/">Vania</a>, <a href="https://profiles.wordpress.org/yogeshbhutkar/">Yogesh Bhutkar</a>, <a href="https://profiles.wordpress.org/yowangdu/">YoWangdu</a>, <a href="https://profiles.wordpress.org/zargarov/">Zargarov</a>, and <a href="https://profiles.wordpress.org/zeelthakkar/">zeelthakkar</a>.</p>
+
+
+
+<h2 class="wp-block-heading">How to contribute</h2>
+
+
+
+<p>To get involved in WordPress core development, head over to Trac, <a href="https://core.trac.wordpress.org/report/6">pick a ticket</a>, and join the conversation in the <a href="https://wordpress.slack.com/archives/C02RQBWTW">#core</a> and <a href="https://wordpress.slack.com/archives/C080HLPP2Q6">#6-8-release-leads</a> channels. Need help? Check out the <a href="https://make.wordpress.org/core/handbook/">Core Contributor Handbook</a>.</p>
+
+
+
+<p class="has-text-align-right"><em>Thanks to <a href='https://profiles.wordpress.org/marybaum/' class='mention'><span class='mentions-prefix'>@</span>marybaum</a>, <a href='https://profiles.wordpress.org/aaroncampbell/' class='mention'><span class='mentions-prefix'>@</span>aaroncampbell</a>, <a href='https://profiles.wordpress.org/jeffpaul/' class='mention'><span class='mentions-prefix'>@</span>jeffpaul</a>, <a href='https://profiles.wordpress.org/audrasjb/' class='mention'><span class='mentions-prefix'>@</span>audrasjb</a>, <a href='https://profiles.wordpress.org/cbravobernal/' class='mention'><span class='mentions-prefix'>@</span>cbravobernal</a>, <a href='https://profiles.wordpress.org/ankit-k-gupta/' class='mention'><span class='mentions-prefix'>@</span>ankit-k-gupta</a> for proofreading.</em></p>
+]]></content:encoded>
+
+
+			<post-id xmlns="com-wordpress:feed-additions:1">18096</post-id>
+		</item>
+	</channel>
+</rss>
