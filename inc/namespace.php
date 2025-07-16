@@ -30,6 +30,18 @@ function bootstrap() {
 	add_action( 'init', __NAMESPACE__ . '\\register_cpt' );
 	add_action( 'init', __NAMESPACE__ . '\\register_custom_taxonomy' );
 	add_action( 'init', __NAMESPACE__ . '\\register_expired_post_status' );
+	add_action( 'init', __NAMESPACE__ . '\\register_custom_block' );
+}
+
+/**
+ * Register the custom RSS Ingested block.
+ *
+ * This is basically the latest posts block but with a custom query
+ * to account for the custom post type and taxonomy.
+ */
+function register_custom_block() {
+	// Only available in 6.8 and later.
+	wp_register_block_types_from_metadata_collection( dirname( __DIR__ ) . '/build', dirname( __DIR__ ) . '/build/blocks-manifest.php' );
 }
 
 /**
