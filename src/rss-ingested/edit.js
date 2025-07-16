@@ -14,8 +14,6 @@ import {
 	Spinner,
 	ToggleControl,
 	ToolbarGroup,
-	__experimentalToggleGroupControl as ToggleGroupControl,
-	__experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
 	__experimentalToolsPanel as ToolsPanel,
 	__experimentalToolsPanelItem as ToolsPanelItem,
 } from '@wordpress/components';
@@ -25,18 +23,9 @@ import {
 	InspectorControls,
 	BlockControls,
 	useBlockProps,
-	store as blockEditorStore,
 } from '@wordpress/block-editor';
 import { useSelect, useDispatch } from '@wordpress/data';
-import {
-	pin,
-	list,
-	grid,
-	alignNone,
-	positionLeft,
-	positionCenter,
-	positionRight,
-} from '@wordpress/icons';
+import { pin, list, grid } from '@wordpress/icons';
 import { store as coreStore } from '@wordpress/core-data';
 import { store as noticeStore } from '@wordpress/notices';
 import { useInstanceId, useViewportMatch } from '@wordpress/compose';
@@ -87,23 +76,17 @@ function Controls( { attributes, setAttributes, postCount } ) {
 		columns,
 		excerptLength,
 	} = attributes;
-	const {
-		categoriesList,
-	} = useSelect(
-		( select ) => {
-			const { getEntityRecords } = select( coreStore );
-			const settings = select( blockEditorStore ).getSettings();
+	const { categoriesList } = useSelect( ( select ) => {
+		const { getEntityRecords } = select( coreStore );
 
-			return {
-				categoriesList: getEntityRecords(
-					'taxonomy',
-					'rss_syndicated_site', // @todo: Use the dynamic taxonomy.
-					CATEGORIES_LIST_QUERY
-				),
-			};
-		},
-		[]
-	);
+		return {
+			categoriesList: getEntityRecords(
+				'taxonomy',
+				'rss_syndicated_site', // @todo: Use the dynamic taxonomy.
+				CATEGORIES_LIST_QUERY
+			),
+		};
+	}, [] );
 
 	const dropdownMenuProps = useToolsPanelDropdownMenuProps();
 
