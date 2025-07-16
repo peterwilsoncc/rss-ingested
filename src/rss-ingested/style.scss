@@ -1,4 +1,4 @@
-@import "base-styles/mixins";
+@use "base-styles/mixins";
 
 .pwcc-rss-ingested-block-latest-posts {
 	// This block has customizable padding, border-box makes that more predictable.
@@ -35,7 +35,7 @@
 		}
 	}
 
-	@include break-small {
+	@include mixins.break-small {
 
 		@for $i from 2 through 6 {
 			&.columns-#{ $i } li {
