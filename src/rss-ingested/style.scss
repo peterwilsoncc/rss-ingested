@@ -1,17 +1,21 @@
-@import 'base-styles/mixins';
+@import "base-styles/mixins";
 
 .pwcc-rss-ingested-block-latest-posts {
 	// This block has customizable padding, border-box makes that more predictable.
 	box-sizing: border-box;
 
 	&.alignleft {
+
 		/*rtl:ignore*/
 		margin-right: 2em;
 	}
+
 	&.alignright {
+
 		/*rtl:ignore*/
 		margin-left: 2em;
 	}
+
 	&.pwcc-rss-ingested-block-latest-posts__list {
 		list-style: none;
 
@@ -32,6 +36,7 @@
 	}
 
 	@include break-small {
+
 		@for $i from 2 through 6 {
 			&.columns-#{ $i } li {
 				width: calc((100% / #{$i}) - 1.25em + (1.25em / #{$i}));
@@ -45,9 +50,11 @@
 }
 
 :root {
+
 	:where(.pwcc-rss-ingested-block-latest-posts.is-grid) {
 		padding: 0;
 	}
+
 	:where(.pwcc-rss-ingested-block-latest-posts.pwcc-rss-ingested-block-latest-posts__list) {
 		padding-left: 0;
 	}
@@ -66,26 +73,35 @@
 }
 
 .pwcc-rss-ingested-block-latest-posts__featured-image {
+
 	a {
 		display: inline-block;
 	}
+
 	img {
 		height: auto;
 		width: auto;
 		max-width: 100%;
 	}
+
 	&.alignleft {
+
 		/*rtl:ignore*/
 		margin-right: 1em;
+
 		/*rtl:ignore*/
 		float: left;
 	}
+
 	&.alignright {
+
 		/*rtl:ignore*/
 		margin-left: 1em;
+
 		/*rtl:ignore*/
 		float: right;
 	}
+
 	&.aligncenter {
 		margin-bottom: 1em;
 		text-align: center;

@@ -239,7 +239,10 @@ function Controls( { attributes, setAttributes, postCount } ) {
 							label={ __( 'Content length', 'rss-ingested' ) }
 							selected={ displayPostContentRadio }
 							options={ [
-								{ label: __( 'Excerpt', 'rss-ingested' ), value: 'excerpt' },
+								{
+									label: __( 'Excerpt', 'rss-ingested' ),
+									value: 'excerpt',
+								},
 								{
 									label: __( 'Full post', 'rss-ingested' ),
 									value: 'full_post',
@@ -259,7 +262,10 @@ function Controls( { attributes, setAttributes, postCount } ) {
 							hasValue={ () =>
 								excerptLength !== DEFAULT_EXCERPT_LENGTH
 							}
-							label={ __( 'Max number of words', 'rss-ingested' ) }
+							label={ __(
+								'Max number of words',
+								'rss-ingested'
+							) }
 							onDeselect={ () =>
 								setAttributes( {
 									excerptLength: DEFAULT_EXCERPT_LENGTH,
@@ -270,7 +276,10 @@ function Controls( { attributes, setAttributes, postCount } ) {
 							<RangeControl
 								__nextHasNoMarginBottom
 								__next40pxDefaultSize
-								label={ __( 'Max number of words', 'rss-ingested' ) }
+								label={ __(
+									'Max number of words',
+									'rss-ingested'
+								) }
 								value={ excerptLength }
 								onChange={ ( value ) =>
 									setAttributes( { excerptLength: value } )
@@ -403,7 +412,10 @@ function Controls( { attributes, setAttributes, postCount } ) {
 								className="editor-latest-posts-image-alignment-control"
 								__nextHasNoMarginBottom
 								__next40pxDefaultSize
-								label={ __( 'Image alignment', 'rss-ingested' ) }
+								label={ __(
+									'Image alignment',
+									'rss-ingested'
+								) }
 								value={ featuredImageAlign || 'none' }
 								onChange={ ( value ) =>
 									setAttributes( {
@@ -430,7 +442,10 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						</ToolsPanelItem>
 						<ToolsPanelItem
 							hasValue={ () => !! addLinkToFeaturedImage }
-							label={ __( 'Add link to featured image', 'rss-ingested' ) }
+							label={ __(
+								'Add link to featured image',
+								'rss-ingested'
+							) }
 							onDeselect={ () =>
 								setAttributes( {
 									addLinkToFeaturedImage: false,
@@ -440,7 +455,10 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						>
 							<ToggleControl
 								__nextHasNoMarginBottom
-								label={ __( 'Add link to featured image', 'rss-ingested' ) }
+								label={ __(
+									'Add link to featured image',
+									'rss-ingested'
+								) }
 								checked={ addLinkToFeaturedImage }
 								onChange={ ( value ) =>
 									setAttributes( {
@@ -590,10 +608,13 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 	const { createWarningNotice } = useDispatch( noticeStore );
 	const showRedirectionPreventedNotice = ( event ) => {
 		event.preventDefault();
-		createWarningNotice( __( 'Links are disabled in the editor.', 'rss-ingested' ), {
-			id: `block-library/core/latest-posts/redirection-prevented/${ instanceId }`,
-			type: 'snackbar',
-		} );
+		createWarningNotice(
+			__( 'Links are disabled in the editor.', 'rss-ingested' ),
+			{
+				id: `block-library/core/latest-posts/redirection-prevented/${ instanceId }`,
+				type: 'snackbar',
+			}
+		);
 	};
 
 	const hasPosts = !! latestPosts?.length;
@@ -620,7 +641,10 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 		return (
 			<div { ...blockProps }>
 				{ inspectorControls }
-				<Placeholder icon={ pin } label={ __( 'Latest Posts', 'rss-ingested' ) }>
+				<Placeholder
+					icon={ pin }
+					label={ __( 'Latest Posts', 'rss-ingested' ) }
+				>
 					{ ! Array.isArray( latestPosts ) ? (
 						<Spinner />
 					) : (
@@ -710,7 +734,8 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 										'… <a>Read more<span>: %1$s</span></a>',
 										'rss-ingested'
 									),
-									titleTrimmed || __( '(no title)', 'rss-ingested' )
+									titleTrimmed ||
+										__( '(no title)', 'rss-ingested' )
 								),
 								{
 									a: (
@@ -766,7 +791,9 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 								}
 								onClick={ showRedirectionPreventedNotice }
 							>
-								{ ! titleTrimmed ? __( '(no title)', 'rss-ingested' ) : null }
+								{ ! titleTrimmed
+									? __( '(no title)', 'rss-ingested' )
+									: null }
 							</a>
 							{ displayPostDate && post.date_gmt && (
 								<time

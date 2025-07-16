@@ -219,7 +219,9 @@ $z-layers: (
 );
 
 @function z-index( $key ) {
+
 	@if map.has-key( $z-layers, $key ) {
+
 		@return map.get( $z-layers, $key );
 	}
 

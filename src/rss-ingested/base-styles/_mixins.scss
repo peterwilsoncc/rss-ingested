@@ -21,54 +21,63 @@
 }
 
 @mixin heading-small() {
+
 	@include _text-heading();
 	font-size: variables.$font-size-x-small;
 	line-height: variables.$font-line-height-x-small;
 }
 
 @mixin heading-medium() {
+
 	@include _text-heading();
 	font-size: variables.$font-size-medium;
 	line-height: variables.$font-line-height-small;
 }
 
 @mixin heading-large() {
+
 	@include _text-heading();
 	font-size: variables.$font-size-large;
 	line-height: variables.$font-line-height-small;
 }
 
 @mixin heading-x-large() {
+
 	@include _text-heading();
 	font-size: variables.$font-size-x-large;
 	line-height: variables.$font-line-height-medium;
 }
 
 @mixin heading-2x-large() {
+
 	@include _text-heading();
 	font-size: variables.$font-size-2x-large;
 	line-height: variables.$font-line-height-2x-large;
 }
 
 @mixin body-small() {
+
 	@include _text-body();
 	font-size: variables.$font-size-small;
 	line-height: variables.$font-line-height-x-small;
 }
 
 @mixin body-medium() {
+
 	@include _text-body();
 	font-size: variables.$font-size-medium;
 	line-height: variables.$font-line-height-small;
 }
 
 @mixin body-large() {
+
 	@include _text-body();
 	font-size: variables.$font-size-large;
 	line-height: variables.$font-line-height-medium;
 }
 
 @mixin body-x-large() {
+
 	@include _text-body();
 	font-size: variables.$font-size-x-large;
 	line-height: variables.$font-line-height-x-large;
@@ -79,54 +88,63 @@
  */
 
 @mixin break-xhuge() {
+
 	@media (min-width: #{ (breakpoints.$break-xhuge) }) {
 		@content;
 	}
 }
 
 @mixin break-huge() {
+
 	@media (min-width: #{ (breakpoints.$break-huge) }) {
 		@content;
 	}
 }
 
 @mixin break-wide() {
+
 	@media (min-width: #{ (breakpoints.$break-wide) }) {
 		@content;
 	}
 }
 
 @mixin break-xlarge() {
+
 	@media (min-width: #{ (breakpoints.$break-xlarge) }) {
 		@content;
 	}
 }
 
 @mixin break-large() {
+
 	@media (min-width: #{ (breakpoints.$break-large) }) {
 		@content;
 	}
 }
 
 @mixin break-medium() {
+
 	@media (min-width: #{ (breakpoints.$break-medium) }) {
 		@content;
 	}
 }
 
 @mixin break-small() {
+
 	@media (min-width: #{ (breakpoints.$break-small) }) {
 		@content;
 	}
 }
 
 @mixin break-mobile() {
+
 	@media (min-width: #{ (breakpoints.$break-mobile) }) {
 		@content;
 	}
 }
 
 @mixin break-zoomed-in() {
+
 	@media (min-width: #{ (breakpoints.$break-zoomed-in) }) {
 		@content;
 	}
@@ -194,6 +212,7 @@
 	}
 
 	.auto-fold #{$selector} { /* Auto fold is when on smaller breakpoints, nav menu auto collapses. */
+
 		@media (min-width: #{ (breakpoints.$break-medium + 1) }) {
 			left: variables.$admin-sidebar-width-collapsed;
 		}
@@ -244,16 +263,19 @@
 @mixin reduce-motion($property: "") {
 
 	@if $property == "transition" {
+
 		@media (prefers-reduced-motion: reduce) {
 			transition-duration: 0s;
 			transition-delay: 0s;
 		}
 	} @else if $property == "animation" {
+
 		@media (prefers-reduced-motion: reduce) {
 			animation-duration: 1ms;
 			animation-delay: 0s;
 		}
 	} @else {
+
 		@media (prefers-reduced-motion: reduce) {
 			transition-duration: 0s;
 			transition-delay: 0s;
@@ -266,19 +288,24 @@
 @mixin input-control($accent-color: var(--wp-admin-theme-color)) {
 	font-family: variables.$default-font;
 	padding: 6px 8px;
+
 	/* Fonts smaller than 16px causes mobile safari to zoom. */
 	font-size: variables.$mobile-text-min-font-size;
+
 	/* Override core line-height. To be reviewed. */
 	line-height: normal;
+
 	@include input-style__neutral();
 
 	@include break-small {
 		font-size: variables.$default-font-size;
+
 		/* Override core line-height. To be reviewed. */
 		line-height: normal;
 	}
 
 	&:focus {
+
 		@include input-style__focus($accent-color);
 	}
 
@@ -301,6 +328,7 @@
 	margin-right: variables.$grid-unit-15;
 	transition: none;
 	border-radius: variables.$radius-small;
+
 	@include input-control;
 
 	&:focus {
@@ -343,7 +371,7 @@
 			vertical-align: middle;
 			width: 16px;
 			/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- dashicons don't need a generic family keyword. */
-			font: normal 30px/1 dashicons;
+			font: 400 30px/1 dashicons;
 			speak: none;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
@@ -437,6 +465,7 @@
 }
 
 @mixin link-reset {
+
 	&:focus {
 		color: var(--wp-admin-theme-color--rgb);
 		box-shadow: 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color, #007cba);
@@ -456,6 +485,7 @@
 
 	// Fonts smaller than 16px causes mobile safari to zoom.
 	font-size: variables.$mobile-text-min-font-size !important;
+
 	@include break-small {
 		font-size: variables.$default-font-size !important;
 	}
@@ -524,47 +554,58 @@
 	// Focus style width.
 	// Avoid rounding issues by showing a whole 2px for 1x screens, and 1.5px on high resolution screens.
 	--wp-admin-border-width-focus: 2px;
+
 	@media ( -webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 		--wp-admin-border-width-focus: 1.5px;
 	}
 }
 
 @mixin wordpress-admin-schemes() {
+
 	body.admin-color-light {
+
 		@include admin-scheme(#0085ba);
 	}
 
 	body.admin-color-modern {
+
 		@include admin-scheme(#3858e9);
 	}
 
 	body.admin-color-blue {
+
 		@include admin-scheme(#096484);
 	}
 
 	body.admin-color-coffee {
+
 		@include admin-scheme(#46403c);
 	}
 
 	body.admin-color-ectoplasm {
+
 		@include admin-scheme(#523f6d);
 	}
 
 	body.admin-color-midnight {
+
 		@include admin-scheme(#e14d43);
 	}
 
 	body.admin-color-ocean {
+
 		@include admin-scheme(#627c83);
 	}
 
 	body.admin-color-sunrise {
+
 		@include admin-scheme(#dd823b);
 	}
 }
 
 // Deprecated from UI, kept for back-compat.
 @mixin background-colors-deprecated() {
+
 	.has-very-light-gray-background-color {
 		background-color: #eee;
 	}
@@ -576,6 +617,7 @@
 
 // Deprecated from UI, kept for back-compat.
 @mixin foreground-colors-deprecated() {
+
 	.has-very-light-gray-color {
 		color: #eee;
 	}
@@ -627,15 +669,18 @@
 		width: 12px;
 		height: 12px;
 	}
+
 	&::-webkit-scrollbar-track {
 		background-color: transparent;
 	}
+
 	&::-webkit-scrollbar-thumb {
 		background-color: $handle-color;
 		border-radius: 8px;
 		border: 3px solid transparent;
 		background-clip: padding-box;
 	}
+
 	&:hover::-webkit-scrollbar-thumb, // This needs specificity.
 	&:focus::-webkit-scrollbar-thumb,
 	&:focus-within::-webkit-scrollbar-thumb {
@@ -658,6 +703,7 @@
 
 	// Always show scrollbar on Mobile devices.
 	@media (hover: none) {
+
 		& {
 			scrollbar-color: $handle-color-hover transparent;
 		}
@@ -679,5 +725,6 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+
 	@include selected-block-outline($widthRatio);
 }
