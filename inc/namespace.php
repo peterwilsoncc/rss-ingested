@@ -25,6 +25,7 @@ function bootstrap() {
 
 	add_action( 'pre_get_posts', __NAMESPACE__ . '\\remove_hidden_sites_from_post_query' );
 	add_filter( 'post_link', __NAMESPACE__ . '\\syndicated_post_permalink', 10, 2 );
+	add_filter( 'post_type_link', __NAMESPACE__ . '\\syndicated_post_permalink', 10, 2 );
 	add_filter( 'term_link', __NAMESPACE__ . '\\syndicated_site_term_link', 10, 3 );
 	add_filter( 'the_title_rss', __NAMESPACE__ . '\\syndicated_post_title_rss', 10 );
 	add_action( 'init', __NAMESPACE__ . '\\register_cpt' );
