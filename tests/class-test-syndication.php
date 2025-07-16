@@ -3,11 +3,14 @@
  * Test Syndication
  *
  * @package PWCC\RssIngested\Tests
+ *
+ * phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_tax_query -- term in query is fine.
  */
 
 namespace PWCC\RssIngested\Tests;
 
 use PWCC\RssIngested\Syndicate;
+use PWCC\RssIngested\Settings;
 use WP_UnitTestCase;
 
 /**
@@ -30,25 +33,32 @@ class Test_Syndication extends WP_UnitTestCase {
 	}
 
 	/**
-	 * Test the feed category was created.
+	 * Test the feed term was created.
 	 */
-	public function test_feed_category_created() {
-		$feed_category = get_term_by( 'name', 'WordPress News', 'category' );
+	public function test_feed_term_created() {
+		$feed_term = get_term_by( 'name', 'WordPress News', Settings\get_syndicated_site_taxonomy() );
 
-		$this->assertInstanceof( 'WP_Term', $feed_category, 'The feed category should exist.' );
+		$this->assertInstanceof( 'WP_Term', $feed_term, 'The feed term should exist.' );
 	}
 
 	/**
 	 * Test that the syndicated posts are created.
 	 */
 	public function test_syndicated_posts_created() {
-		$feed_category = get_term_by( 'name', 'WordPress News', 'category' );
+		$feed_term = get_term_by( 'name', 'WordPress News', Settings\get_syndicated_site_taxonomy() );
 
 		// Query posts for the feed.
 		$query = new \WP_Query(
 			array(
-				'post_status'   => 'all',
-				'category_name' => $feed_category->slug,
+				'post_type'   => Settings\get_syndicated_feed_post_type(),
+				'post_status' => 'all',
+				'tax_query'   => array(
+					array(
+						'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+						'field'    => 'slug',
+						'terms'    => $feed_term->slug,
+					),
+				),
 			)
 		);
 
@@ -74,14 +84,21 @@ class Test_Syndication extends WP_UnitTestCase {
 	 * This test is to ensure that posts that are unpublished on the ingesting site feed are not republished when the feed is fetched.
 	 */
 	public function test_posts_unpublished_not_republished_upon_feed_fetched() {
-		$feed_category = get_term_by( 'name', 'WordPress News', 'category' );
+		$feed_term = get_term_by( 'name', 'WordPress News', Settings\get_syndicated_site_taxonomy() );
 
 		// Query the first published post.
 		$query = new \WP_Query(
 			array(
+				'post_type'      => Settings\get_syndicated_feed_post_type(),
 				'post_status'    => 'publish',
-				'category_name'  => $feed_category->slug,
 				'posts_per_page' => 1,
+				'tax_query'      => array(
+					array(
+						'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+						'field'    => 'slug',
+						'terms'    => $feed_term->slug,
+					),
+				),
 			)
 		);
 
@@ -116,14 +133,21 @@ class Test_Syndication extends WP_UnitTestCase {
 	 * This test is to ensure that posts that are unpublished on the ingesting site feed are not republished when the feed is updates.
 	 */
 	public function test_posts_unpublished_are_not_republished_upon_feed_update() {
-		$feed_category = get_term_by( 'name', 'WordPress News', 'category' );
+		$feed_term = get_term_by( 'name', 'WordPress News', Settings\get_syndicated_site_taxonomy() );
 
 		// Query the first published post.
 		$query = new \WP_Query(
 			array(
+				'post_type'      => Settings\get_syndicated_feed_post_type(),
 				'post_status'    => 'publish',
-				'category_name'  => $feed_category->slug,
 				'posts_per_page' => 1,
+				'tax_query'      => array(
+					array(
+						'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+						'field'    => 'slug',
+						'terms'    => $feed_term->slug,
+					),
+				),
 			)
 		);
 
@@ -156,14 +180,21 @@ class Test_Syndication extends WP_UnitTestCase {
 	 * Ensure that posts unpublished on the ingesting site are not republished when edited at source.
 	 */
 	public function test_posts_unpublished_are_not_republished_upon_post_edit() {
-		$feed_category = get_term_by( 'name', 'WordPress News', 'category' );
+		$feed_term = get_term_by( 'name', 'WordPress News', Settings\get_syndicated_site_taxonomy() );
 
 		// Query the first published post.
 		$query = new \WP_Query(
 			array(
+				'post_type'      => Settings\get_syndicated_feed_post_type(),
 				'post_status'    => 'publish',
-				'category_name'  => $feed_category->slug,
 				'posts_per_page' => 1,
+				'tax_query'      => array(
+					array(
+						'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+						'field'    => 'slug',
+						'terms'    => $feed_term->slug,
+					),
+				),
 			)
 		);
 
@@ -196,14 +227,21 @@ class Test_Syndication extends WP_UnitTestCase {
 	 * Ensure that posts that are no longer in the feed are set to expired.
 	 */
 	public function test_posts_no_longer_in_feed_are_set_to_expired() {
-		$feed_category = get_term_by( 'name', 'WordPress News', 'category' );
+		$feed_term = get_term_by( 'name', 'WordPress News', Settings\get_syndicated_site_taxonomy() );
 
 		// Query the last published post.
 		$query = new \WP_Query(
 			array(
+				'post_type'      => Settings\get_syndicated_feed_post_type(),
 				'post_status'    => 'publish',
-				'category_name'  => $feed_category->slug,
 				'posts_per_page' => 1,
+				'tax_query'      => array(
+					array(
+						'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+						'field'    => 'slug',
+						'terms'    => $feed_term->slug,
+					),
+				),
 				'order'          => 'DESC',
 				'orderby'        => 'ID',
 			)
@@ -228,13 +266,20 @@ class Test_Syndication extends WP_UnitTestCase {
 	 * Ensure that expired posts are republished when they are in the feed again.
 	 */
 	public function test_expired_posts_are_republished_when_in_feed_again() {
-		$feed_category = get_term_by( 'name', 'WordPress News', 'category' );
+		$feed_term = get_term_by( 'name', 'WordPress News', Settings\get_syndicated_site_taxonomy() );
 
-		// Query the posts in the category.
+		// Query the posts in the term.
 		$query = new \WP_Query(
 			array(
-				'post_status'   => 'all',
-				'category_name' => $feed_category->slug,
+				'post_type'   => Settings\get_syndicated_feed_post_type(),
+				'post_status' => 'all',
+				'tax_query'   => array(
+					array(
+						'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+						'field'    => 'slug',
+						'terms'    => $feed_term->slug,
+					),
+				),
 			)
 		);
 
@@ -275,7 +320,7 @@ class Test_Syndication extends WP_UnitTestCase {
 	 * @param string $expected_value The expected value after the edit.
 	 */
 	public function test_post_edits_at_source_are_reflected_in_syndicated_content( $post_number, $edited_field, $expected_value ) {
-		$feed_category = get_term_by( 'name', 'WordPress News', 'category' );
+		$feed_term = get_term_by( 'name', 'WordPress News', Settings\get_syndicated_site_taxonomy() );
 
 		// Update the feed with edited content.
 		self::filter_request( 'https://wordpress.org/news/feed/', 'wp-org-news-edited.rss' );
@@ -284,8 +329,15 @@ class Test_Syndication extends WP_UnitTestCase {
 		// Query the posts.
 		$query = new \WP_Query(
 			array(
-				'post_status'   => 'all',
-				'category_name' => $feed_category->slug,
+				'post_type'   => Settings\get_syndicated_feed_post_type(),
+				'post_status' => 'all',
+				'tax_query'   => array(
+					array(
+						'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+						'field'    => 'slug',
+						'terms'    => $feed_term->slug,
+					),
+				),
 			)
 		);
 
@@ -321,7 +373,7 @@ class Test_Syndication extends WP_UnitTestCase {
 	public function test_new_posts_are_not_ingested_for_uningested_feeds() {
 		// Add the filter to prevent ingestion.
 		add_filter(
-			'pwp_syndicated_feeds',
+			'pwcc_syndicated_feeds',
 			function () {
 				return array(
 					array(
@@ -340,12 +392,18 @@ class Test_Syndication extends WP_UnitTestCase {
 		Syndicate\syndicate_feed( 'https://wordpress.org/news/feed/' );
 
 		// Query all the posts.
-		$feed_category = get_term_by( 'name', 'WordPress News', 'category' );
-		$query         = new \WP_Query(
+		$feed_term = get_term_by( 'name', 'WordPress News', Settings\get_syndicated_site_taxonomy() );
+		$query     = new \WP_Query(
 			array(
 				'post_status'    => 'all',
 				'posts_per_page' => -1,
-				'category_name'  => $feed_category->slug,
+				'tax_query'      => array(
+					array(
+						'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+						'field'    => 'slug',
+						'terms'    => $feed_term->slug,
+					),
+				),
 			)
 		);
 
@@ -362,7 +420,7 @@ class Test_Syndication extends WP_UnitTestCase {
 	public function test_updated_posts_for_uningested_feeds_are_expired() {
 		// Add the filter to prevent ingestion.
 		add_filter(
-			'pwp_syndicated_feeds',
+			'pwcc_syndicated_feeds',
 			function () {
 				return array(
 					array(
@@ -380,11 +438,17 @@ class Test_Syndication extends WP_UnitTestCase {
 		Syndicate\syndicate_feed( 'https://wordpress.org/news/feed/' );
 
 		// Query the posts.
-		$feed_category = get_term_by( 'name', 'WordPress News', 'category' );
-		$query         = new \WP_Query(
+		$feed_term = get_term_by( 'name', 'WordPress News', Settings\get_syndicated_site_taxonomy() );
+		$query     = new \WP_Query(
 			array(
-				'post_status'   => 'all',
-				'category_name' => $feed_category->slug,
+				'post_status' => 'all',
+				'tax_query'   => array(
+					array(
+						'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+						'field'    => 'slug',
+						'terms'    => $feed_term->slug,
+					),
+				),
 			)
 		);
 
@@ -402,7 +466,7 @@ class Test_Syndication extends WP_UnitTestCase {
 	public function test_new_posts_not_created_for_uningested_feeds() {
 		// Add the filter to prevent ingestion.
 		add_filter(
-			'pwp_syndicated_feeds',
+			'pwcc_syndicated_feeds',
 			function () {
 				return array(
 					array(
@@ -438,7 +502,7 @@ class Test_Syndication extends WP_UnitTestCase {
 	public function test_posts_removed_from_feed_are_expired_for_uningested_feeds() {
 		// Add the filter to prevent ingestion.
 		add_filter(
-			'pwp_syndicated_feeds',
+			'pwcc_syndicated_feeds',
 			function () {
 				return array(
 					array(
@@ -461,6 +525,7 @@ class Test_Syndication extends WP_UnitTestCase {
 			array(
 				'title'       => 'WordPress 6.7.1 Maintenance Release',
 				'post_status' => 'all',
+				'post_type'   => Settings\get_syndicated_feed_post_type(),
 			)
 		);
 		$expired_post  = reset( $expired_posts );
@@ -473,13 +538,19 @@ class Test_Syndication extends WP_UnitTestCase {
 	 * Revisions should not be created for unchanged posts.
 	 */
 	public function test_unchanged_posts_at_source_do_not_create_revisions() {
-		$feed_category = get_term_by( 'name', 'WordPress News', 'category' );
+		$feed_term = get_term_by( 'name', 'WordPress News', Settings\get_syndicated_site_taxonomy() );
 
 		// Query the posts.
 		$query = new \WP_Query(
 			array(
-				'post_status'   => 'all',
-				'category_name' => $feed_category->slug,
+				'post_status' => 'all',
+				'tax_query'   => array(
+					array(
+						'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+						'field'    => 'slug',
+						'terms'    => $feed_term->slug,
+					),
+				),
 			)
 		);
 

@@ -84,7 +84,7 @@ function get_syndicated_feeds() {
 	 *
 	 * @param array[] $feeds Array of syndicated feeds.
 	 */
-	$feeds = apply_filters( 'pwp_syndicated_feeds', $feeds );
+	$feeds = apply_filters( 'pwcc_syndicated_feeds', $feeds );
 
 	return $feeds;
 }
@@ -143,7 +143,7 @@ function get_term_ids_for_undisplayed_sites() {
 	$term_ids = array();
 
 	foreach ( $hidden_sites as $site ) {
-		$term = get_term_by( 'slug', hash( 'sha256', $site['feed_url'] ), 'category' );
+		$term = get_term_by( 'slug', hash( 'sha256', $site['feed_url'] ), get_syndicated_site_taxonomy() );
 
 		if ( false !== $term ) {
 			$term_ids[] = $term->term_id;

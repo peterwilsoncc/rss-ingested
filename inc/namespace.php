@@ -27,6 +27,8 @@ function bootstrap() {
 	add_filter( 'post_link', __NAMESPACE__ . '\\syndicated_post_permalink', 10, 2 );
 	add_filter( 'term_link', __NAMESPACE__ . '\\syndicated_site_term_link', 10, 3 );
 	add_filter( 'the_title_rss', __NAMESPACE__ . '\\syndicated_post_title_rss', 10 );
+	add_action( 'init', __NAMESPACE__ . '\\register_cpt' );
+	add_action( 'init', __NAMESPACE__ . '\\register_custom_taxonomy' );
 	add_action( 'init', __NAMESPACE__ . '\\register_expired_post_status' );
 }
 
@@ -58,6 +60,9 @@ function register_cpt() {
 	);
 }
 
+/**
+ * Register the custom taxonomy for syndicated sites.
+ */
 function register_custom_taxonomy() {
 	if ( 'rss_syndicated_site' !== Settings\get_syndicated_site_taxonomy() ) {
 		// Don't register if the taxonomy is not used.
@@ -110,12 +115,19 @@ function remove_hidden_sites_from_post_query( $query ) {
 		return;
 	}
 
+	$ingested_post_type     = Settings\get_syndicated_feed_post_type();
+	$ingested_post_taxonomy = Settings\get_syndicated_site_taxonomy();
+
 	if (
-		$query->get( 'post_type' ) !== 'post'
-		&& $query->get( 'post_type' ) !== array( 'post' )
-		&& $query->get( 'post_type' ) !== ''
+		$query->get( 'post_type' ) !== $ingested_post_type
+		&& $query->get( 'post_type' ) !== array( $ingested_post_type )
 	) {
 		// Only make changes to queries for posts.
+		return;
+	}
+
+	if ( 'post' === $ingested_post_type && $query->get( 'post_type' ) === '' ) {
+		// Account for default post type queries if using the default post type.
 		return;
 	}
 
@@ -125,12 +137,28 @@ function remove_hidden_sites_from_post_query( $query ) {
 		return;
 	}
 
-	$already_hidden = $query->get( 'category__not_in' );
-	if ( ! is_array( $already_hidden ) ) {
-		$already_hidden = array();
+	$hidden_tax_query = array(
+		'taxonomy' => $ingested_post_taxonomy,
+		'field'    => 'term_id',
+		'terms'    => $hidden_site_ids,
+		'operator' => 'NOT IN',
+	);
+
+	$tax_query     = $query->get( 'tax_query' );
+	$new_tax_query = array();
+	if ( ! is_array( $tax_query ) ) {
+		$new_tax_query = array(
+			array( $hidden_tax_query ),
+		);
+	} else {
+		$new_tax_query = array(
+			'relation' => 'AND',
+			$hidden_tax_query,
+			$tax_query,
+		);
 	}
 
-	$query->set( 'category__not_in', array_merge( $already_hidden, $hidden_site_ids ) );
+	$query->set( 'tax_query', $new_tax_query );
 }
 
 /**
@@ -146,7 +174,7 @@ function syndicated_post_permalink( $permalink, $post ) {
 		return $permalink;
 	}
 
-	if ( 'post' === $post->post_type && get_post_meta( $post->ID, 'permalink', true ) ) {
+	if ( Settings\get_syndicated_feed_post_type() === $post->post_type && get_post_meta( $post->ID, 'permalink', true ) ) {
 		$permalink = get_post_meta( $post->ID, 'permalink', true );
 	}
 	return $permalink;
@@ -166,7 +194,7 @@ function syndicated_site_term_link( $term_link, $term, $taxonomy ) {
 		return $term_link;
 	}
 
-	if ( 'category' === $taxonomy && get_term_meta( $term->term_id, 'syndication_link', true ) ) {
+	if ( Settings\get_syndicated_site_taxonomy() === $taxonomy && get_term_meta( $term->term_id, 'syndication_link', true ) ) {
 		$term_link = get_term_meta( $term->term_id, 'syndication_link', true );
 	}
 	return $term_link;

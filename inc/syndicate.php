@@ -62,9 +62,9 @@ function syndicate_feed( $feed_url ) {
 		return 'is error';
 	}
 
-	$term = maybe_create_category( $feed_data );
+	$term = maybe_create_term( $feed_data );
 	if ( is_wp_error( $term ) ) {
-		// Something went wrong creating/getting the category.
+		// Something went wrong creating/getting the term.
 		return;
 	}
 
@@ -106,13 +106,20 @@ function unpublished_expired_items( $items, $feed_data, $term_id ) {
 
 	$query = new WP_Query(
 		array(
-			'post_type'              => 'post',
+			'post_type'              => Settings\get_syndicated_feed_post_type(),
 			'post_status'            => 'publish',
 			'posts_per_page'         => -1,
 			'update_post_meta_cache' => false,
 			'update_post_term_cache' => false,
 			'no_found_rows'          => true,
-			'cat'                    => $term_id,
+			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query -- term in query is fine.
+			'tax_query'              => array(
+				array(
+					'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+					'field'    => 'term_id',
+					'terms'    => $term_id,
+				),
+			),
 		)
 	);
 
@@ -142,25 +149,25 @@ function unpublished_expired_items( $items, $feed_data, $term_id ) {
 
 
 /**
- * Create or update the category for a feed.
+ * Create or update the term for a feed.
  *
- * Creates a category for the feed based on the feed URL. If a category
+ * Creates a term for the feed based on the feed URL. If a term
  * exists, the name will be updated if it has changed.
  *
  * @param array $feed_data The feed data.
  * @return array|WP_Error The term data or a WP_Error object.
  */
-function maybe_create_category( $feed_data ) {
+function maybe_create_term( $feed_data ) {
 	// Base the slug on the feed URL to allow for the site name to change.
 	$term_slug  = hash( 'sha256', $feed_data['feed_url'] );
 	$term_title = wp_strip_all_tags( $feed_data['title'] );
 
-	$term = get_term_by( 'slug', $term_slug, 'category' );
+	$term = get_term_by( 'slug', $term_slug, Settings\get_syndicated_site_taxonomy() );
 
 	if ( false === $term ) {
 		$new_term = wp_insert_term(
 			$term_title,
-			'category',
+			Settings\get_syndicated_site_taxonomy(),
 			array(
 				'slug' => $term_slug,
 			)
@@ -175,7 +182,7 @@ function maybe_create_category( $feed_data ) {
 	if ( $term->name !== $term_title || $term_syndication_link !== $feed_data['site_link'] ) {
 		$new_term = wp_update_term(
 			$term->term_id,
-			'category',
+			Settings\get_syndicated_site_taxonomy(),
 			array(
 				'name' => $term_title,
 			)
@@ -222,7 +229,7 @@ function syndicate_item( $item, $feed_data, $term_id ) {
 	// Check if the item has already been syndicated.
 	$query = new WP_Query(
 		array(
-			'post_type'              => 'post',
+			'post_type'              => Settings\get_syndicated_feed_post_type(),
 			'post_status'            => 'all',
 			'post_name__in'          => $post_name_in,
 			'update_post_meta_cache' => false,
@@ -252,7 +259,7 @@ function syndicate_item( $item, $feed_data, $term_id ) {
 		'post_excerpt'   => wp_kses_post( $item->get_description() ),
 		'post_date_gmt'  => $mysql_date_gmt,
 		'post_status'    => 'publish',
-		'post_type'      => 'post',
+		'post_type'      => Settings\get_syndicated_feed_post_type(),
 		'post_name'      => $post_slug,
 		'comment_status' => 'closed',
 		'ping_status'    => 'closed',
@@ -262,7 +269,6 @@ function syndicate_item( $item, $feed_data, $term_id ) {
 			'syndicated_feed_url'  => $feed_data['site_link'],
 			'permalink'            => sanitize_url( $item->get_permalink() ),
 		),
-		'post_category'  => array( $term_id ),
 	);
 
 	if ( $updating ) {
@@ -316,4 +322,5 @@ function syndicate_item( $item, $feed_data, $term_id ) {
 	}
 
 	$post_id = wp_insert_post( $post_data );
+	wp_add_object_terms( $post_id, $term_id, Settings\get_syndicated_site_taxonomy() );
 }

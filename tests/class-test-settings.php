@@ -8,6 +8,7 @@
 namespace PWCC\RssIngested\Tests;
 
 use PWCC\RssIngested\Syndicate;
+use PWCC\RssIngested\Settings;
 use WP_UnitTestCase;
 
 /**
@@ -33,7 +34,9 @@ class Test_Settings extends WP_UnitTestCase {
 	 * Undisplayed feeds should not show in the query.
 	 */
 	public function test_remove_undisplayed_sites_from_post_query() {
-		$this->go_to( '/' );
+		$go_to_url = Settings\get_syndicated_feed_post_type() === 'post' ? '/' : '/?post_type=' . Settings\get_syndicated_feed_post_type();
+
+		$this->go_to( $go_to_url );
 		$this->assertNotEmpty( $GLOBALS['wp_query']->posts, 'Prior to filtering the feed should appear in the query.' );
 
 		// Filter the feed to be undisplayed.
@@ -52,7 +55,7 @@ class Test_Settings extends WP_UnitTestCase {
 			}
 		);
 
-		$this->go_to( '/' );
+		$this->go_to( $go_to_url );
 		$this->assertEmpty( $GLOBALS['wp_query']->posts, 'The undisplayed feed should not be in the query.' );
 	}
 
