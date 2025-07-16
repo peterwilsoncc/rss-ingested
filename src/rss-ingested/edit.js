@@ -65,22 +65,22 @@ const imageAlignmentOptions = [
 	{
 		value: 'none',
 		icon: alignNone,
-		label: __( 'None' ),
+		label: __( 'None', 'rss-ingested' ),
 	},
 	{
 		value: 'left',
 		icon: positionLeft,
-		label: __( 'Left' ),
+		label: __( 'Left', 'rss-ingested' ),
 	},
 	{
 		value: 'center',
 		icon: positionCenter,
-		label: __( 'Center' ),
+		label: __( 'Center', 'rss-ingested' ),
 	},
 	{
 		value: 'right',
 		icon: positionRight,
-		label: __( 'Right' ),
+		label: __( 'Right', 'rss-ingested' ),
 	},
 ];
 
@@ -197,7 +197,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 	return (
 		<>
 			<ToolsPanel
-				label={ __( 'Post content' ) }
+				label={ __( 'Post content', 'rss-ingested' ) }
 				resetAll={ () =>
 					setAttributes( {
 						displayPostContent: false,
@@ -209,7 +209,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 			>
 				<ToolsPanelItem
 					hasValue={ () => !! displayPostContent }
-					label={ __( 'Display post content' ) }
+					label={ __( 'Display post content', 'rss-ingested' ) }
 					onDeselect={ () =>
 						setAttributes( { displayPostContent: false } )
 					}
@@ -217,7 +217,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 				>
 					<ToggleControl
 						__nextHasNoMarginBottom
-						label={ __( 'Display post content' ) }
+						label={ __( 'Display post content', 'rss-ingested' ) }
 						checked={ displayPostContent }
 						onChange={ ( value ) =>
 							setAttributes( { displayPostContent: value } )
@@ -227,7 +227,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 				{ displayPostContent && (
 					<ToolsPanelItem
 						hasValue={ () => displayPostContentRadio !== 'excerpt' }
-						label={ __( 'Content length' ) }
+						label={ __( 'Content length', 'rss-ingested' ) }
 						onDeselect={ () =>
 							setAttributes( {
 								displayPostContentRadio: 'excerpt',
@@ -236,12 +236,12 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						isShownByDefault
 					>
 						<RadioControl
-							label={ __( 'Content length' ) }
+							label={ __( 'Content length', 'rss-ingested' ) }
 							selected={ displayPostContentRadio }
 							options={ [
-								{ label: __( 'Excerpt' ), value: 'excerpt' },
+								{ label: __( 'Excerpt', 'rss-ingested' ), value: 'excerpt' },
 								{
-									label: __( 'Full post' ),
+									label: __( 'Full post', 'rss-ingested' ),
 									value: 'full_post',
 								},
 							] }
@@ -259,7 +259,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 							hasValue={ () =>
 								excerptLength !== DEFAULT_EXCERPT_LENGTH
 							}
-							label={ __( 'Max number of words' ) }
+							label={ __( 'Max number of words', 'rss-ingested' ) }
 							onDeselect={ () =>
 								setAttributes( {
 									excerptLength: DEFAULT_EXCERPT_LENGTH,
@@ -270,7 +270,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 							<RangeControl
 								__nextHasNoMarginBottom
 								__next40pxDefaultSize
-								label={ __( 'Max number of words' ) }
+								label={ __( 'Max number of words', 'rss-ingested' ) }
 								value={ excerptLength }
 								onChange={ ( value ) =>
 									setAttributes( { excerptLength: value } )
@@ -282,7 +282,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 					) }
 			</ToolsPanel>
 			<ToolsPanel
-				label={ __( 'Post meta' ) }
+				label={ __( 'Post meta', 'rss-ingested' ) }
 				resetAll={ () =>
 					setAttributes( {
 						displayPostDate: false,
@@ -292,7 +292,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 			>
 				<ToolsPanelItem
 					hasValue={ () => !! displayPostDate }
-					label={ __( 'Display post date' ) }
+					label={ __( 'Display post date', 'rss-ingested' ) }
 					onDeselect={ () =>
 						setAttributes( { displayPostDate: false } )
 					}
@@ -300,7 +300,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 				>
 					<ToggleControl
 						__nextHasNoMarginBottom
-						label={ __( 'Display post date' ) }
+						label={ __( 'Display post date', 'rss-ingested' ) }
 						checked={ displayPostDate }
 						onChange={ ( value ) =>
 							setAttributes( { displayPostDate: value } )
@@ -309,7 +309,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 				</ToolsPanelItem>
 			</ToolsPanel>
 			<ToolsPanel
-				label={ __( 'Featured image' ) }
+				label={ __( 'Featured image', 'rss-ingested' ) }
 				resetAll={ () =>
 					setAttributes( {
 						displayFeaturedImage: false,
@@ -324,7 +324,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 			>
 				<ToolsPanelItem
 					hasValue={ () => !! displayFeaturedImage }
-					label={ __( 'Display featured image' ) }
+					label={ __( 'Display featured image', 'rss-ingested' ) }
 					onDeselect={ () =>
 						setAttributes( { displayFeaturedImage: false } )
 					}
@@ -332,7 +332,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 				>
 					<ToggleControl
 						__nextHasNoMarginBottom
-						label={ __( 'Display featured image' ) }
+						label={ __( 'Display featured image', 'rss-ingested' ) }
 						checked={ displayFeaturedImage }
 						onChange={ ( value ) =>
 							setAttributes( { displayFeaturedImage: value } )
@@ -347,7 +347,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 								featuredImageSizeWidth !== null ||
 								featuredImageSizeHeight !== null
 							}
-							label={ __( 'Image size' ) }
+							label={ __( 'Image size', 'rss-ingested' ) }
 							onDeselect={ () =>
 								setAttributes( {
 									featuredImageSizeSlug: 'thumbnail',
@@ -377,7 +377,8 @@ function Controls( { attributes, setAttributes, postCount } ) {
 								imageHeight={ defaultImageHeight }
 								imageSizeOptions={ imageSizeOptions }
 								imageSizeHelp={ __(
-									'Select the size of the source image.'
+									'Select the size of the source image.',
+									'rss-ingested'
 								) }
 								onChangeImage={ ( value ) =>
 									setAttributes( {
@@ -390,7 +391,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						</ToolsPanelItem>
 						<ToolsPanelItem
 							hasValue={ () => !! featuredImageAlign }
-							label={ __( 'Image alignment' ) }
+							label={ __( 'Image alignment', 'rss-ingested' ) }
 							onDeselect={ () =>
 								setAttributes( {
 									featuredImageAlign: undefined,
@@ -402,7 +403,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 								className="editor-latest-posts-image-alignment-control"
 								__nextHasNoMarginBottom
 								__next40pxDefaultSize
-								label={ __( 'Image alignment' ) }
+								label={ __( 'Image alignment', 'rss-ingested' ) }
 								value={ featuredImageAlign || 'none' }
 								onChange={ ( value ) =>
 									setAttributes( {
@@ -429,7 +430,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						</ToolsPanelItem>
 						<ToolsPanelItem
 							hasValue={ () => !! addLinkToFeaturedImage }
-							label={ __( 'Add link to featured image' ) }
+							label={ __( 'Add link to featured image', 'rss-ingested' ) }
 							onDeselect={ () =>
 								setAttributes( {
 									addLinkToFeaturedImage: false,
@@ -439,7 +440,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						>
 							<ToggleControl
 								__nextHasNoMarginBottom
-								label={ __( 'Add link to featured image' ) }
+								label={ __( 'Add link to featured image', 'rss-ingested' ) }
 								checked={ addLinkToFeaturedImage }
 								onChange={ ( value ) =>
 									setAttributes( {
@@ -453,7 +454,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 			</ToolsPanel>
 
 			<ToolsPanel
-				label={ __( 'Sorting and filtering' ) }
+				label={ __( 'Sorting and filtering', 'rss-ingested' ) }
 				resetAll={ () =>
 					setAttributes( {
 						order: 'desc',
@@ -472,7 +473,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						postsToShow !== 5 ||
 						categories?.length > 0
 					}
-					label={ __( 'Sort and filter' ) }
+					label={ __( 'Sort and filter', 'rss-ingested' ) }
 					onDeselect={ () =>
 						setAttributes( {
 							order: 'desc',
@@ -504,7 +505,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 				{ postLayout === 'grid' && (
 					<ToolsPanelItem
 						hasValue={ () => columns !== 3 }
-						label={ __( 'Columns' ) }
+						label={ __( 'Columns', 'rss-ingested' ) }
 						onDeselect={ () =>
 							setAttributes( {
 								columns: 3,
@@ -515,7 +516,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						<RangeControl
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
-							label={ __( 'Columns' ) }
+							label={ __( 'Columns', 'rss-ingested' ) }
 							value={ columns }
 							onChange={ ( value ) =>
 								setAttributes( { columns: value } )
@@ -589,7 +590,7 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 	const { createWarningNotice } = useDispatch( noticeStore );
 	const showRedirectionPreventedNotice = ( event ) => {
 		event.preventDefault();
-		createWarningNotice( __( 'Links are disabled in the editor.' ), {
+		createWarningNotice( __( 'Links are disabled in the editor.', 'rss-ingested' ), {
 			id: `block-library/core/latest-posts/redirection-prevented/${ instanceId }`,
 			type: 'snackbar',
 		} );
@@ -619,11 +620,11 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 		return (
 			<div { ...blockProps }>
 				{ inspectorControls }
-				<Placeholder icon={ pin } label={ __( 'Latest Posts' ) }>
+				<Placeholder icon={ pin } label={ __( 'Latest Posts', 'rss-ingested' ) }>
 					{ ! Array.isArray( latestPosts ) ? (
 						<Spinner />
 					) : (
-						__( 'No posts found.' )
+						__( 'No posts found.', 'rss-ingested' )
 					) }
 				</Placeholder>
 			</div>
@@ -706,9 +707,10 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 								sprintf(
 									/* translators: 1: Hidden accessibility text: Post title */
 									__(
-										'… <a>Read more<span>: %1$s</span></a>'
+										'… <a>Read more<span>: %1$s</span></a>',
+										'rss-ingested'
 									),
-									titleTrimmed || __( '(no title)' )
+									titleTrimmed || __( '(no title)', 'rss-ingested' )
 								),
 								{
 									a: (
@@ -764,7 +766,7 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 								}
 								onClick={ showRedirectionPreventedNotice }
 							>
-								{ ! titleTrimmed ? __( '(no title)' ) : null }
+								{ ! titleTrimmed ? __( '(no title)', 'rss-ingested' ) : null }
 							</a>
 							{ displayPostDate && post.date_gmt && (
 								<time

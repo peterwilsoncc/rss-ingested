@@ -48,7 +48,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 	$pwcc_rss_ingested_title     = get_the_title( $pwcc_rss_ingested_post );
 
 	if ( ! $pwcc_rss_ingested_title ) {
-		$pwcc_rss_ingested_title = __( '(no title)' );
+		$pwcc_rss_ingested_title = __( '(no title)', 'rss-ingested' );
 	}
 
 	$pwcc_rss_ingested_list_items_markup .= '<li>';
@@ -118,7 +118,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 				$pwcc_rss_ingested_trimmed_excerpt  = substr( $pwcc_rss_ingested_trimmed_excerpt, 0, -11 );
 				$pwcc_rss_ingested_trimmed_excerpt .= sprintf(
 					/* translators: 1: A URL to a post, 2: Hidden accessibility text: Post title */
-					__( '… <a class="pwcc-rss-ingested-block-latest-posts__read-more" href="%1$s" rel="noopener noreferrer">Read more<span class="screen-reader-text">: %2$s</span></a>' ),
+					__( '… <a class="pwcc-rss-ingested-block-latest-posts__read-more" href="%1$s" rel="noopener noreferrer">Read more<span class="screen-reader-text">: %2$s</span></a>', 'rss-ingested' ),
 					esc_url( $pwcc_rss_ingested_post_link ),
 					esc_html( $pwcc_rss_ingested_title )
 				);
@@ -126,7 +126,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 		}
 
 		if ( post_password_required( $pwcc_rss_ingested_post ) ) {
-			$pwcc_rss_ingested_trimmed_excerpt = __( 'This content is password protected.' );
+			$pwcc_rss_ingested_trimmed_excerpt = __( 'This content is password protected.', 'rss-ingested' );
 		}
 
 		$pwcc_rss_ingested_list_items_markup .= sprintf(
@@ -140,7 +140,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 		$pwcc_rss_ingested_post_content = html_entity_decode( $pwcc_rss_ingested_post->post_content, ENT_QUOTES, get_option( 'blog_charset' ) );
 
 		if ( post_password_required( $pwcc_rss_ingested_post ) ) {
-			$pwcc_rss_ingested_post_content = __( 'This content is password protected.' );
+			$pwcc_rss_ingested_post_content = __( 'This content is password protected.', 'rss-ingested' );
 		}
 
 		$pwcc_rss_ingested_list_items_markup .= sprintf(
