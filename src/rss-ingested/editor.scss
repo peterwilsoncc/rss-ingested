@@ -1,10 +1,3 @@
-.pwcc-rss-ingested-block-latest-posts {
-	// Apply overflow for post items, so any floated featured images won't crop the focus style.
-	> li {
-		overflow: hidden;
-	}
-}
-
 .pwcc-rss-ingested-block-latest-posts li a > div {
 	display: inline;
 }
@@ -13,15 +6,11 @@
 	padding-left: 2.5em;
 }
 
-:root {
-
-	:where(.pwcc-rss-ingested-block-latest-posts.is-grid),
-	:where(.pwcc-rss-ingested-block-latest-posts__list) {
-		padding-left: 0;
-	}
-}
-
 .pwcc-rss-ingested-block-latest-posts {
+	// Apply overflow for post items.
+	> li {
+		overflow: hidden;
+	}
 	// This block has customizable padding, border-box makes that more predictable.
 	box-sizing: border-box;
 
@@ -72,6 +61,11 @@
 
 :root {
 
+	:where(.pwcc-rss-ingested-block-latest-posts.is-grid),
+	:where(.pwcc-rss-ingested-block-latest-posts__list) {
+		padding-left: 0;
+	}
+
 	:where(.pwcc-rss-ingested-block-latest-posts.is-grid) {
 		padding: 0;
 	}
@@ -90,40 +84,4 @@
 .pwcc-rss-ingested-block-latest-posts__post-full-content {
 	margin-top: 0.5em;
 	margin-bottom: 1em;
-}
-
-.pwcc-rss-ingested-block-latest-posts__featured-image {
-
-	a {
-		display: inline-block;
-	}
-
-	img {
-		height: auto;
-		width: auto;
-		max-width: 100%;
-	}
-
-	&.alignleft {
-
-		/*rtl:ignore*/
-		margin-right: 1em;
-
-		/*rtl:ignore*/
-		float: left;
-	}
-
-	&.alignright {
-
-		/*rtl:ignore*/
-		margin-left: 1em;
-
-		/*rtl:ignore*/
-		float: right;
-	}
-
-	&.aligncenter {
-		margin-bottom: 1em;
-		text-align: center;
-	}
 }
