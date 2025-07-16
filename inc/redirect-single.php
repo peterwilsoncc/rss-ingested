@@ -24,7 +24,7 @@ function bootstrap() {
  * Redirect requests to a single post to the source site.
  */
 function redirect_to_source() {
-	if ( ! is_single() ) {
+	if ( ! is_singular( Settings\get_syndicated_feed_post_type() ) ) {
 		return;
 	}
 
