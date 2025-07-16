@@ -41,7 +41,7 @@ class Test_Settings extends WP_UnitTestCase {
 
 		// Filter the feed to be undisplayed.
 		add_filter(
-			'pwp_syndicated_feeds',
+			'pwcc_syndicated_feeds',
 			function () {
 				return array(
 					array(
