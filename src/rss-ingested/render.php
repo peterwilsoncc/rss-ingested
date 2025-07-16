@@ -12,7 +12,7 @@ use PWCC\RssIngested\Settings;
 use WP_Query;
 
 $pwcc_rss_ingested_query_args = array(
-	'post_type' => Settings\get_syndicated_feed_post_type(),
+	'post_type'           => Settings\get_syndicated_feed_post_type(),
 	'posts_per_page'      => $attributes['postsToShow'],
 	'post_status'         => 'publish',
 	'order'               => $attributes['order'],
@@ -105,7 +105,6 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 
 	if ( isset( $attributes['displayPostContent'] ) && $attributes['displayPostContent']
 		&& isset( $attributes['displayPostContentRadio'] ) && 'excerpt' === $attributes['displayPostContentRadio'] ) {
-
 		$pwcc_rss_ingested_trimmed_excerpt = get_the_excerpt( $pwcc_rss_ingested_post );
 
 		/*
@@ -138,7 +137,6 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 
 	if ( isset( $attributes['displayPostContent'] ) && $attributes['displayPostContent']
 		&& isset( $attributes['displayPostContentRadio'] ) && 'full_post' === $attributes['displayPostContentRadio'] ) {
-
 		$pwcc_rss_ingested_post_content = html_entity_decode( $pwcc_rss_ingested_post->post_content, ENT_QUOTES, get_option( 'blog_charset' ) );
 
 		if ( post_password_required( $pwcc_rss_ingested_post ) ) {
