@@ -34,10 +34,6 @@ if ( ! empty( $attributes['categories'] ) ) {
 	);
 }
 
-if ( isset( $attributes['selectedAuthor'] ) ) {
-	$pwcc_rss_ingested_query_args['author'] = $attributes['selectedAuthor'];
-}
-
 $pwcc_rss_ingested_query        = new WP_Query();
 $pwcc_rss_ingested_recent_posts = $pwcc_rss_ingested_query->query( $pwcc_rss_ingested_query_args );
 
@@ -98,20 +94,6 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 		esc_url( $pwcc_rss_ingested_post_link ),
 		$pwcc_rss_ingested_title
 	);
-
-	if ( isset( $attributes['displayAuthor'] ) && $attributes['displayAuthor'] ) {
-		$pwcc_rss_ingested_author_display_name = get_the_author_meta( 'display_name', $pwcc_rss_ingested_post->post_author );
-
-		/* translators: byline. %s: author. */
-		$pwcc_rss_ingested_byline = sprintf( __( 'by %s' ), $pwcc_rss_ingested_author_display_name );
-
-		if ( ! empty( $pwcc_rss_ingested_author_display_name ) ) {
-			$pwcc_rss_ingested_list_items_markup .= sprintf(
-				'<div class="pwcc-rss-ingested-block-latest-posts__post-author">%1$s</div>',
-				$pwcc_rss_ingested_byline
-			);
-		}
-	}
 
 	if ( isset( $attributes['displayPostDate'] ) && $attributes['displayPostDate'] ) {
 		$pwcc_rss_ingested_list_items_markup .= sprintf(

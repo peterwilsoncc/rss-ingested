@@ -15,9 +15,6 @@
 				"type": "object"
 			}
 		},
-		"selectedAuthor": {
-			"type": "number"
-		},
 		"postsToShow": {
 			"type": "number",
 			"default": 5
@@ -33,10 +30,6 @@
 		"excerptLength": {
 			"type": "number",
 			"default": 55
-		},
-		"displayAuthor": {
-			"type": "boolean",
-			"default": false
 		},
 		"displayPostDate": {
 			"type": "boolean",

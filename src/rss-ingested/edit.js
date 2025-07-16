@@ -61,11 +61,6 @@ const CATEGORIES_LIST_QUERY = {
 	_fields: 'id,name',
 	context: 'view',
 };
-const USERS_LIST_QUERY = {
-	per_page: -1,
-	has_published_posts: [ 'post' ],
-	context: 'view',
-};
 const imageAlignmentOptions = [
 	{
 		value: 'none',
@@ -113,22 +108,16 @@ function getFeaturedImageDetails( post, size ) {
 	};
 }
 
-function getCurrentAuthor( post ) {
-	return post._embedded?.author?.[ 0 ];
-}
-
 function Controls( { attributes, setAttributes, postCount } ) {
 	const {
 		postsToShow,
 		order,
 		orderBy,
 		categories,
-		selectedAuthor,
 		displayFeaturedImage,
 		displayPostContentRadio,
 		displayPostContent,
 		displayPostDate,
-		displayAuthor,
 		postLayout,
 		columns,
 		excerptLength,
@@ -143,10 +132,9 @@ function Controls( { attributes, setAttributes, postCount } ) {
 		defaultImageWidth,
 		defaultImageHeight,
 		categoriesList,
-		authorList,
 	} = useSelect(
 		( select ) => {
-			const { getEntityRecords, getUsers } = select( coreStore );
+			const { getEntityRecords } = select( coreStore );
 			const settings = select( blockEditorStore ).getSettings();
 
 			return {
@@ -162,7 +150,6 @@ function Controls( { attributes, setAttributes, postCount } ) {
 					'rss_syndicated_site', // @todo: Use the dynamic taxonomy.
 					CATEGORIES_LIST_QUERY
 				),
-				authorList: getUsers( USERS_LIST_QUERY ),
 			};
 		},
 		[ featuredImageSizeSlug ]
@@ -298,29 +285,11 @@ function Controls( { attributes, setAttributes, postCount } ) {
 				label={ __( 'Post meta' ) }
 				resetAll={ () =>
 					setAttributes( {
-						displayAuthor: false,
 						displayPostDate: false,
 					} )
 				}
 				dropdownMenuProps={ dropdownMenuProps }
 			>
-				<ToolsPanelItem
-					hasValue={ () => !! displayAuthor }
-					label={ __( 'Display author name' ) }
-					onDeselect={ () =>
-						setAttributes( { displayAuthor: false } )
-					}
-					isShownByDefault
-				>
-					<ToggleControl
-						__nextHasNoMarginBottom
-						label={ __( 'Display author name' ) }
-						checked={ displayAuthor }
-						onChange={ ( value ) =>
-							setAttributes( { displayAuthor: value } )
-						}
-					/>
-				</ToolsPanelItem>
 				<ToolsPanelItem
 					hasValue={ () => !! displayPostDate }
 					label={ __( 'Display post date' ) }
@@ -491,7 +460,6 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						orderBy: 'date',
 						postsToShow: 5,
 						categories: undefined,
-						selectedAuthor: undefined,
 						columns: 3,
 					} )
 				}
@@ -502,8 +470,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						order !== 'desc' ||
 						orderBy !== 'date' ||
 						postsToShow !== 5 ||
-						categories?.length > 0 ||
-						!! selectedAuthor
+						categories?.length > 0
 					}
 					label={ __( 'Sort and filter' ) }
 					onDeselect={ () =>
@@ -512,7 +479,6 @@ function Controls( { attributes, setAttributes, postCount } ) {
 							orderBy: 'date',
 							postsToShow: 5,
 							categories: undefined,
-							selectedAuthor: undefined,
 						} )
 					}
 					isShownByDefault
@@ -532,14 +498,6 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						categorySuggestions={ categorySuggestions }
 						onCategoryChange={ selectCategories }
 						selectedCategories={ categories }
-						onAuthorChange={ ( value ) =>
-							setAttributes( {
-								selectedAuthor:
-									'' !== value ? Number( value ) : undefined,
-							} )
-						}
-						authorList={ authorList ?? [] }
-						selectedAuthorId={ selectedAuthor }
 					/>
 				</ToolsPanelItem>
 
@@ -585,12 +543,10 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 		order,
 		orderBy,
 		categories,
-		selectedAuthor,
 		displayFeaturedImage,
 		displayPostContentRadio,
 		displayPostContent,
 		displayPostDate,
-		displayAuthor,
 		postLayout,
 		columns,
 		excerptLength,
@@ -610,11 +566,10 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 			const latestPostsQuery = Object.fromEntries(
 				Object.entries( {
 					syndicated_sites: catIds,
-					author: selectedAuthor,
 					order,
 					orderby: orderBy,
 					per_page: postsToShow,
-					_embed: 'author,wp:featuredmedia',
+					_embed: 'wp:featuredmedia',
 					ignore_sticky: true,
 				} ).filter( ( [ , value ] ) => typeof value !== 'undefined' )
 			);
@@ -627,7 +582,7 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 				),
 			};
 		},
-		[ postsToShow, order, orderBy, categories, selectedAuthor ]
+		[ postsToShow, order, orderBy, categories ]
 	);
 
 	// If a user clicks to a link prevent redirection and show a warning.
@@ -656,7 +611,6 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 			'pwcc-rss-ingested-block-latest-posts__list': true,
 			'is-grid': postLayout === 'grid',
 			'has-dates': displayPostDate,
-			'has-author': displayAuthor,
 			[ `columns-${ columns }` ]: postLayout === 'grid',
 		} ),
 	} );
@@ -709,7 +663,6 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 				{ displayPosts.map( ( post ) => {
 					const titleTrimmed = post.title.rendered.trim();
 					let excerpt = post.excerpt.rendered;
-					const currentAuthor = getCurrentAuthor( post );
 
 					const excerptElement = document.createElement( 'div' );
 					excerptElement.innerHTML = excerpt;
@@ -813,15 +766,6 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 							>
 								{ ! titleTrimmed ? __( '(no title)' ) : null }
 							</a>
-							{ displayAuthor && currentAuthor && (
-								<div className="pwcc-rss-ingested-block-latest-posts__post-author">
-									{ sprintf(
-										/* translators: byline. %s: author. */
-										__( 'by %s' ),
-										currentAuthor.name
-									) }
-								</div>
-							) }
 							{ displayPostDate && post.date_gmt && (
 								<time
 									dateTime={ format( 'c', post.date_gmt ) }
