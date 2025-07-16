@@ -21,10 +21,11 @@ $pwcc_rss_ingested_query_args = array(
 	'no_found_rows'       => true,
 );
 
-$block_core_latest_posts_excerpt_length = $attributes['excerptLength'];
+$pwcc_rss_ingested_block_core_latest_posts_excerpt_length = $attributes['excerptLength'];
 add_filter( 'excerpt_length', 'block_core_latest_posts_get_excerpt_length', 20 );
 
 if ( ! empty( $attributes['categories'] ) ) {
+	// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query -- term__in query is fine.
 	$pwcc_rss_ingested_query_args['tax_query'] = array(
 		array(
 			'taxonomy' => Settings\get_syndicated_site_taxonomy(),
@@ -73,8 +74,8 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 			*/
 		if ( str_ends_with( $pwcc_rss_ingested_trimmed_excerpt, ' [&hellip;]' ) ) {
 			/** This filter is documented in wp-includes/formatting.php */
-			$pwcc_rss_ingested_excerpt_length = (int) apply_filters( 'excerpt_length', $block_core_latest_posts_excerpt_length );
-			if ( $pwcc_rss_ingested_excerpt_length <= $block_core_latest_posts_excerpt_length ) {
+			$pwcc_rss_ingested_excerpt_length = (int) apply_filters( 'excerpt_length', $pwcc_rss_ingested_block_core_latest_posts_excerpt_length ); //phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- core hook.
+			if ( $pwcc_rss_ingested_excerpt_length <= $pwcc_rss_ingested_block_core_latest_posts_excerpt_length ) {
 				$pwcc_rss_ingested_trimmed_excerpt  = substr( $pwcc_rss_ingested_trimmed_excerpt, 0, -11 );
 				$pwcc_rss_ingested_trimmed_excerpt .= sprintf(
 					/* translators: 1: A URL to a post, 2: Hidden accessibility text: Post title */
@@ -135,6 +136,8 @@ $pwcc_rss_ingested_wrapper_attributes = get_block_wrapper_attributes( array( 'cl
 
 printf(
 	'<ul %1$s>%2$s</ul>',
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped on input.
 	$pwcc_rss_ingested_wrapper_attributes,
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped on input.
 	$pwcc_rss_ingested_list_items_markup
 );
