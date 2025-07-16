@@ -653,7 +653,7 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 
 	const blockProps = useBlockProps( {
 		className: clsx( {
-			'wp-block-latest-posts__list': true,
+			'pwcc-rss-ingested-block-latest-posts__list': true,
 			'is-grid': postLayout === 'grid',
 			'has-dates': displayPostDate,
 			'has-author': displayAuthor,
@@ -722,7 +722,7 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 					const { url: imageSourceUrl, alt: featuredImageAlt } =
 						getFeaturedImageDetails( post, featuredImageSizeSlug );
 					const imageClasses = clsx( {
-						'wp-block-latest-posts__featured-image': true,
+						'pwcc-rss-ingested-block-latest-posts__featured-image': true,
 						[ `align${ featuredImageAlign }` ]:
 							!! featuredImageAlign,
 					} );
@@ -761,7 +761,7 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 									a: (
 										// eslint-disable-next-line jsx-a11y/anchor-has-content
 										<a
-											className="wp-block-latest-posts__read-more"
+											className="pwcc-rss-ingested-block-latest-posts__read-more"
 											href={ post.link }
 											rel="noopener noreferrer"
 											onClick={
@@ -799,7 +799,7 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 								</div>
 							) }
 							<a
-								className="wp-block-latest-posts__post-title"
+								className="pwcc-rss-ingested-block-latest-posts__post-title"
 								href={ post.link }
 								rel="noreferrer noopener"
 								dangerouslySetInnerHTML={
@@ -814,7 +814,7 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 								{ ! titleTrimmed ? __( '(no title)' ) : null }
 							</a>
 							{ displayAuthor && currentAuthor && (
-								<div className="wp-block-latest-posts__post-author">
+								<div className="pwcc-rss-ingested-block-latest-posts__post-author">
 									{ sprintf(
 										/* translators: byline. %s: author. */
 										__( 'by %s' ),
@@ -825,21 +825,21 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 							{ displayPostDate && post.date_gmt && (
 								<time
 									dateTime={ format( 'c', post.date_gmt ) }
-									className="wp-block-latest-posts__post-date"
+									className="pwcc-rss-ingested-block-latest-posts__post-date"
 								>
 									{ dateI18n( dateFormat, post.date_gmt ) }
 								</time>
 							) }
 							{ displayPostContent &&
 								displayPostContentRadio === 'excerpt' && (
-									<div className="wp-block-latest-posts__post-excerpt">
+									<div className="pwcc-rss-ingested-block-latest-posts__post-excerpt">
 										{ postExcerpt }
 									</div>
 								) }
 							{ displayPostContent &&
 								displayPostContentRadio === 'full_post' && (
 									<div
-										className="wp-block-latest-posts__post-full-content"
+										className="pwcc-rss-ingested-block-latest-posts__post-full-content"
 										dangerouslySetInnerHTML={ {
 											__html: post.content.raw.trim(),
 										} }

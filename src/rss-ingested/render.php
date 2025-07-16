@@ -66,7 +66,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 			$pwcc_rss_ingested_image_style .= sprintf( 'max-height:%spx;', $attributes['featuredImageSizeHeight'] );
 		}
 
-		$pwcc_rss_ingested_image_classes = 'wp-block-latest-posts__featured-image';
+		$pwcc_rss_ingested_image_classes = 'pwcc-rss-ingested-block-latest-posts__featured-image';
 		if ( isset( $attributes['featuredImageAlign'] ) ) {
 			$pwcc_rss_ingested_image_classes .= ' align' . $attributes['featuredImageAlign'];
 		}
@@ -94,7 +94,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 	}
 
 	$pwcc_rss_ingested_list_items_markup .= sprintf(
-		'<a class="wp-block-latest-posts__post-title" href="%1$s">%2$s</a>',
+		'<a class="pwcc-rss-ingested-block-latest-posts__post-title" href="%1$s">%2$s</a>',
 		esc_url( $pwcc_rss_ingested_post_link ),
 		$pwcc_rss_ingested_title
 	);
@@ -107,7 +107,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 
 		if ( ! empty( $pwcc_rss_ingested_author_display_name ) ) {
 			$pwcc_rss_ingested_list_items_markup .= sprintf(
-				'<div class="wp-block-latest-posts__post-author">%1$s</div>',
+				'<div class="pwcc-rss-ingested-block-latest-posts__post-author">%1$s</div>',
 				$pwcc_rss_ingested_byline
 			);
 		}
@@ -115,7 +115,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 
 	if ( isset( $attributes['displayPostDate'] ) && $attributes['displayPostDate'] ) {
 		$pwcc_rss_ingested_list_items_markup .= sprintf(
-			'<time datetime="%1$s" class="wp-block-latest-posts__post-date">%2$s</time>',
+			'<time datetime="%1$s" class="pwcc-rss-ingested-block-latest-posts__post-date">%2$s</time>',
 			esc_attr( get_the_date( 'c', $pwcc_rss_ingested_post ) ),
 			get_the_date( '', $pwcc_rss_ingested_post )
 		);
@@ -137,7 +137,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 				$pwcc_rss_ingested_trimmed_excerpt  = substr( $pwcc_rss_ingested_trimmed_excerpt, 0, -11 );
 				$pwcc_rss_ingested_trimmed_excerpt .= sprintf(
 					/* translators: 1: A URL to a post, 2: Hidden accessibility text: Post title */
-					__( '… <a class="wp-block-latest-posts__read-more" href="%1$s" rel="noopener noreferrer">Read more<span class="screen-reader-text">: %2$s</span></a>' ),
+					__( '… <a class="pwcc-rss-ingested-block-latest-posts__read-more" href="%1$s" rel="noopener noreferrer">Read more<span class="screen-reader-text">: %2$s</span></a>' ),
 					esc_url( $pwcc_rss_ingested_post_link ),
 					esc_html( $pwcc_rss_ingested_title )
 				);
@@ -149,7 +149,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 		}
 
 		$pwcc_rss_ingested_list_items_markup .= sprintf(
-			'<div class="wp-block-latest-posts__post-excerpt">%1$s</div>',
+			'<div class="pwcc-rss-ingested-block-latest-posts__post-excerpt">%1$s</div>',
 			$pwcc_rss_ingested_trimmed_excerpt
 		);
 	}
@@ -164,7 +164,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 		}
 
 		$pwcc_rss_ingested_list_items_markup .= sprintf(
-			'<div class="wp-block-latest-posts__post-full-content">%1$s</div>',
+			'<div class="pwcc-rss-ingested-block-latest-posts__post-full-content">%1$s</div>',
 			wp_kses_post( $pwcc_rss_ingested_post_content )
 		);
 	}
@@ -174,7 +174,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 
 remove_filter( 'excerpt_length', 'block_core_latest_posts_get_excerpt_length', 20 );
 
-$pwcc_rss_ingested_classes = array( 'wp-block-latest-posts__list' );
+$pwcc_rss_ingested_classes = array( 'pwcc-rss-ingested-block-latest-posts__list' );
 if ( isset( $attributes['postLayout'] ) && 'grid' === $attributes['postLayout'] ) {
 	$pwcc_rss_ingested_classes[] = 'is-grid';
 }
