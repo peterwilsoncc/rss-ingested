@@ -50,30 +50,6 @@
 		"orderBy": {
 			"type": "string",
 			"default": "date"
-		},
-		"displayFeaturedImage": {
-			"type": "boolean",
-			"default": false
-		},
-		"featuredImageAlign": {
-			"type": "string",
-			"enum": [ "left", "center", "right" ]
-		},
-		"featuredImageSizeSlug": {
-			"type": "string",
-			"default": "thumbnail"
-		},
-		"featuredImageSizeWidth": {
-			"type": "number",
-			"default": null
-		},
-		"featuredImageSizeHeight": {
-			"type": "number",
-			"default": null
-		},
-		"addLinkToFeaturedImage": {
-			"type": "boolean",
-			"default": false
 		}
 	},
 	"supports": {

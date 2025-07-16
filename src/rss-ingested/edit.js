@@ -24,7 +24,6 @@ import { dateI18n, format, getSettings } from '@wordpress/date';
 import {
 	InspectorControls,
 	BlockControls,
-	__experimentalImageSizeControl as ImageSizeControl,
 	useBlockProps,
 	store as blockEditorStore,
 } from '@wordpress/block-editor';
@@ -61,28 +60,6 @@ const CATEGORIES_LIST_QUERY = {
 	_fields: 'id,name',
 	context: 'view',
 };
-const imageAlignmentOptions = [
-	{
-		value: 'none',
-		icon: alignNone,
-		label: __( 'None', 'rss-ingested' ),
-	},
-	{
-		value: 'left',
-		icon: positionLeft,
-		label: __( 'Left', 'rss-ingested' ),
-	},
-	{
-		value: 'center',
-		icon: positionCenter,
-		label: __( 'Center', 'rss-ingested' ),
-	},
-	{
-		value: 'right',
-		icon: positionRight,
-		label: __( 'Right', 'rss-ingested' ),
-	},
-];
 
 function useToolsPanelDropdownMenuProps() {
 	const isMobile = useViewportMatch( 'medium', '<' );
@@ -97,40 +74,20 @@ function useToolsPanelDropdownMenuProps() {
 		: {};
 }
 
-function getFeaturedImageDetails( post, size ) {
-	const image = post._embedded?.[ 'wp:featuredmedia' ]?.[ '0' ];
-
-	return {
-		url:
-			image?.media_details?.sizes?.[ size ]?.source_url ??
-			image?.source_url,
-		alt: image?.alt_text,
-	};
-}
-
 function Controls( { attributes, setAttributes, postCount } ) {
 	const {
 		postsToShow,
 		order,
 		orderBy,
 		categories,
-		displayFeaturedImage,
 		displayPostContentRadio,
 		displayPostContent,
 		displayPostDate,
 		postLayout,
 		columns,
 		excerptLength,
-		featuredImageAlign,
-		featuredImageSizeSlug,
-		featuredImageSizeWidth,
-		featuredImageSizeHeight,
-		addLinkToFeaturedImage,
 	} = attributes;
 	const {
-		imageSizes,
-		defaultImageWidth,
-		defaultImageHeight,
 		categoriesList,
 	} = useSelect(
 		( select ) => {
@@ -138,13 +95,6 @@ function Controls( { attributes, setAttributes, postCount } ) {
 			const settings = select( blockEditorStore ).getSettings();
 
 			return {
-				defaultImageWidth:
-					settings.imageDimensions?.[ featuredImageSizeSlug ]
-						?.width ?? 0,
-				defaultImageHeight:
-					settings.imageDimensions?.[ featuredImageSizeSlug ]
-						?.height ?? 0,
-				imageSizes: settings.imageSizes,
 				categoriesList: getEntityRecords(
 					'taxonomy',
 					'rss_syndicated_site', // @todo: Use the dynamic taxonomy.
@@ -152,17 +102,11 @@ function Controls( { attributes, setAttributes, postCount } ) {
 				),
 			};
 		},
-		[ featuredImageSizeSlug ]
+		[]
 	);
 
 	const dropdownMenuProps = useToolsPanelDropdownMenuProps();
 
-	const imageSizeOptions = imageSizes
-		.filter( ( { slug } ) => slug !== 'full' )
-		.map( ( { name, slug } ) => ( {
-			value: slug,
-			label: name,
-		} ) );
 	const categorySuggestions =
 		categoriesList?.reduce(
 			( accumulator, category ) => ( {
@@ -317,159 +261,6 @@ function Controls( { attributes, setAttributes, postCount } ) {
 					/>
 				</ToolsPanelItem>
 			</ToolsPanel>
-			<ToolsPanel
-				label={ __( 'Featured image', 'rss-ingested' ) }
-				resetAll={ () =>
-					setAttributes( {
-						displayFeaturedImage: false,
-						featuredImageAlign: undefined,
-						featuredImageSizeSlug: 'thumbnail',
-						featuredImageSizeWidth: null,
-						featuredImageSizeHeight: null,
-						addLinkToFeaturedImage: false,
-					} )
-				}
-				dropdownMenuProps={ dropdownMenuProps }
-			>
-				<ToolsPanelItem
-					hasValue={ () => !! displayFeaturedImage }
-					label={ __( 'Display featured image', 'rss-ingested' ) }
-					onDeselect={ () =>
-						setAttributes( { displayFeaturedImage: false } )
-					}
-					isShownByDefault
-				>
-					<ToggleControl
-						__nextHasNoMarginBottom
-						label={ __( 'Display featured image', 'rss-ingested' ) }
-						checked={ displayFeaturedImage }
-						onChange={ ( value ) =>
-							setAttributes( { displayFeaturedImage: value } )
-						}
-					/>
-				</ToolsPanelItem>
-				{ displayFeaturedImage && (
-					<>
-						<ToolsPanelItem
-							hasValue={ () =>
-								featuredImageSizeSlug !== 'thumbnail' ||
-								featuredImageSizeWidth !== null ||
-								featuredImageSizeHeight !== null
-							}
-							label={ __( 'Image size', 'rss-ingested' ) }
-							onDeselect={ () =>
-								setAttributes( {
-									featuredImageSizeSlug: 'thumbnail',
-									featuredImageSizeWidth: null,
-									featuredImageSizeHeight: null,
-								} )
-							}
-							isShownByDefault
-						>
-							<ImageSizeControl
-								onChange={ ( value ) => {
-									const newAttrs = {};
-									if ( value.hasOwnProperty( 'width' ) ) {
-										newAttrs.featuredImageSizeWidth =
-											value.width;
-									}
-									if ( value.hasOwnProperty( 'height' ) ) {
-										newAttrs.featuredImageSizeHeight =
-											value.height;
-									}
-									setAttributes( newAttrs );
-								} }
-								slug={ featuredImageSizeSlug }
-								width={ featuredImageSizeWidth }
-								height={ featuredImageSizeHeight }
-								imageWidth={ defaultImageWidth }
-								imageHeight={ defaultImageHeight }
-								imageSizeOptions={ imageSizeOptions }
-								imageSizeHelp={ __(
-									'Select the size of the source image.',
-									'rss-ingested'
-								) }
-								onChangeImage={ ( value ) =>
-									setAttributes( {
-										featuredImageSizeSlug: value,
-										featuredImageSizeWidth: undefined,
-										featuredImageSizeHeight: undefined,
-									} )
-								}
-							/>
-						</ToolsPanelItem>
-						<ToolsPanelItem
-							hasValue={ () => !! featuredImageAlign }
-							label={ __( 'Image alignment', 'rss-ingested' ) }
-							onDeselect={ () =>
-								setAttributes( {
-									featuredImageAlign: undefined,
-								} )
-							}
-							isShownByDefault
-						>
-							<ToggleGroupControl
-								className="editor-latest-posts-image-alignment-control"
-								__nextHasNoMarginBottom
-								__next40pxDefaultSize
-								label={ __(
-									'Image alignment',
-									'rss-ingested'
-								) }
-								value={ featuredImageAlign || 'none' }
-								onChange={ ( value ) =>
-									setAttributes( {
-										featuredImageAlign:
-											value !== 'none'
-												? value
-												: undefined,
-									} )
-								}
-							>
-								{ imageAlignmentOptions.map(
-									( { value, icon, label } ) => {
-										return (
-											<ToggleGroupControlOptionIcon
-												key={ value }
-												value={ value }
-												icon={ icon }
-												label={ label }
-											/>
-										);
-									}
-								) }
-							</ToggleGroupControl>
-						</ToolsPanelItem>
-						<ToolsPanelItem
-							hasValue={ () => !! addLinkToFeaturedImage }
-							label={ __(
-								'Add link to featured image',
-								'rss-ingested'
-							) }
-							onDeselect={ () =>
-								setAttributes( {
-									addLinkToFeaturedImage: false,
-								} )
-							}
-							isShownByDefault
-						>
-							<ToggleControl
-								__nextHasNoMarginBottom
-								label={ __(
-									'Add link to featured image',
-									'rss-ingested'
-								) }
-								checked={ addLinkToFeaturedImage }
-								onChange={ ( value ) =>
-									setAttributes( {
-										addLinkToFeaturedImage: value,
-									} )
-								}
-							/>
-						</ToolsPanelItem>
-					</>
-				) }
-			</ToolsPanel>
 
 			<ToolsPanel
 				label={ __( 'Sorting and filtering', 'rss-ingested' ) }
@@ -562,18 +353,12 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 		order,
 		orderBy,
 		categories,
-		displayFeaturedImage,
 		displayPostContentRadio,
 		displayPostContent,
 		displayPostDate,
 		postLayout,
 		columns,
 		excerptLength,
-		featuredImageAlign,
-		featuredImageSizeSlug,
-		featuredImageSizeWidth,
-		featuredImageSizeHeight,
-		addLinkToFeaturedImage,
 	} = attributes;
 	const { latestPosts } = useSelect(
 		( select ) => {
@@ -697,26 +482,6 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 						excerptElement.innerText ||
 						'';
 
-					const { url: imageSourceUrl, alt: featuredImageAlt } =
-						getFeaturedImageDetails( post, featuredImageSizeSlug );
-					const imageClasses = clsx( {
-						'pwcc-rss-ingested-block-latest-posts__featured-image': true,
-						[ `align${ featuredImageAlign }` ]:
-							!! featuredImageAlign,
-					} );
-					const renderFeaturedImage =
-						displayFeaturedImage && imageSourceUrl;
-					const featuredImage = renderFeaturedImage && (
-						<img
-							src={ imageSourceUrl }
-							alt={ featuredImageAlt }
-							style={ {
-								maxWidth: featuredImageSizeWidth,
-								maxHeight: featuredImageSizeHeight,
-							} }
-						/>
-					);
-
 					const needsReadMore =
 						excerptLength < excerpt.trim().split( ' ' ).length &&
 						post.excerpt.raw === '';
@@ -761,23 +526,6 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 
 					return (
 						<li key={ post.id }>
-							{ renderFeaturedImage && (
-								<div className={ imageClasses }>
-									{ addLinkToFeaturedImage ? (
-										<a
-											href={ post.link }
-											rel="noreferrer noopener"
-											onClick={
-												showRedirectionPreventedNotice
-											}
-										>
-											{ featuredImage }
-										</a>
-									) : (
-										featuredImage
-									) }
-								</div>
-							) }
 							<a
 								className="pwcc-rss-ingested-block-latest-posts__post-title"
 								href={ post.link }

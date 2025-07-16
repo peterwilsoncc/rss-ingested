@@ -37,10 +37,6 @@ if ( ! empty( $attributes['categories'] ) ) {
 $pwcc_rss_ingested_query        = new WP_Query();
 $pwcc_rss_ingested_recent_posts = $pwcc_rss_ingested_query->query( $pwcc_rss_ingested_query_args );
 
-if ( isset( $attributes['displayFeaturedImage'] ) && $attributes['displayFeaturedImage'] ) {
-	update_post_thumbnail_cache( $pwcc_rss_ingested_query );
-}
-
 $pwcc_rss_ingested_list_items_markup = '';
 
 foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
@@ -52,42 +48,6 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 	}
 
 	$pwcc_rss_ingested_list_items_markup .= '<li>';
-
-	if ( $attributes['displayFeaturedImage'] && has_post_thumbnail( $pwcc_rss_ingested_post ) ) {
-		$pwcc_rss_ingested_image_style = '';
-		if ( isset( $attributes['featuredImageSizeWidth'] ) ) {
-			$pwcc_rss_ingested_image_style .= sprintf( 'max-width:%spx;', $attributes['featuredImageSizeWidth'] );
-		}
-		if ( isset( $attributes['featuredImageSizeHeight'] ) ) {
-			$pwcc_rss_ingested_image_style .= sprintf( 'max-height:%spx;', $attributes['featuredImageSizeHeight'] );
-		}
-
-		$pwcc_rss_ingested_image_classes = 'pwcc-rss-ingested-block-latest-posts__featured-image';
-		if ( isset( $attributes['featuredImageAlign'] ) ) {
-			$pwcc_rss_ingested_image_classes .= ' align' . $attributes['featuredImageAlign'];
-		}
-
-		$pwcc_rss_ingested_featured_image = get_the_post_thumbnail(
-			$pwcc_rss_ingested_post,
-			$attributes['featuredImageSizeSlug'],
-			array(
-				'style' => esc_attr( $pwcc_rss_ingested_image_style ),
-			)
-		);
-		if ( $attributes['addLinkToFeaturedImage'] ) {
-			$pwcc_rss_ingested_featured_image = sprintf(
-				'<a href="%1$s" aria-label="%2$s">%3$s</a>',
-				esc_url( $pwcc_rss_ingested_post_link ),
-				esc_attr( $pwcc_rss_ingested_title ),
-				$pwcc_rss_ingested_featured_image
-			);
-		}
-		$pwcc_rss_ingested_list_items_markup .= sprintf(
-			'<div class="%1$s">%2$s</div>',
-			esc_attr( $pwcc_rss_ingested_image_classes ),
-			$pwcc_rss_ingested_featured_image
-		);
-	}
 
 	$pwcc_rss_ingested_list_items_markup .= sprintf(
 		'<a class="pwcc-rss-ingested-block-latest-posts__post-title" href="%1$s">%2$s</a>',
