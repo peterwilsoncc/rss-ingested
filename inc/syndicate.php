@@ -19,6 +19,7 @@ use WP_Query;
 function bootstrap() {
 	add_action( 'init', __NAMESPACE__ . '\\register_cron_jobs' );
 	add_action( 'pwp_syndicate_feed', __NAMESPACE__ . '\\syndicate_feed', 10, 1 );
+	add_action( 'pwp_trash_expired_posts', __NAMESPACE__ . '\\trash_expired_posts' );
 }
 
 /**
@@ -30,6 +31,40 @@ function register_cron_jobs() {
 		$timestamp = wp_next_scheduled( 'pwp_syndicate_feed', array( $feed['feed_url'] ) );
 		if ( false === $timestamp ) {
 			wp_schedule_event( time(), 'hourly', 'pwp_syndicate_feed', array( $feed['feed_url'] ) );
+		}
+	}
+
+	// Trash expired posts after 30 days.
+	$timestamp = wp_next_scheduled( 'pwp_trash_expired_posts' );
+	if ( false === $timestamp ) {
+		wp_schedule_event( time(), 'daily', 'pwp_trash_expired_posts' );
+	}
+}
+
+/**
+ * Trash expired posts.
+ *
+ * This function will trash posts that have been expired for more than 30 days.
+ */
+function trash_expired_posts() {
+	$query = new WP_Query(
+		array(
+			'post_type'      => Settings\get_syndicated_feed_post_type(),
+			'post_status'    => 'rss_post_expired',
+			'posts_per_page' => -1,
+			'date_query'     => array(
+				array(
+					'column' => 'post_modified_gmt',
+					'before' => '30 days ago',
+				),
+			),
+			'fields'         => 'ids',
+		)
+	);
+
+	if ( ! empty( $query->posts ) ) {
+		foreach ( $query->posts as $post_id ) {
+			wp_trash_post( $post_id );
 		}
 	}
 }
