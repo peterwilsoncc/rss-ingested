@@ -122,6 +122,23 @@ function get_syndicated_site_taxonomy() {
 }
 
 /**
+ * Whether to ingest the full content of syndicated posts.
+ *
+ * If true, the full content of the syndicated post will be included in the
+ * post content. If false, the post content will only include the excerpt.
+ *
+ * @return bool Whether to ingest full content. Defaults to false.
+ */
+function ingest_full_content() {
+	/**
+	 * Filters whether to ingest full content for syndicated posts.
+	 *
+	 * @param bool $ingest Whether to ingest full content. Defaults to false.
+	 */
+	return apply_filters( 'pwcc_rss_ingested_ingest_full_content', false );
+}
+
+/**
  * Get the term IDs for any sites that are not being displayed.
  *
  * @return int[] Array of term IDs for sites that are not being displayed.

@@ -288,9 +288,13 @@ function syndicate_item( $item, $feed_data, $term_id ) {
 	$post_timestamp = $item->get_date( 'U' );
 	$mysql_date_gmt = gmdate( 'Y-m-d H:i:s', $post_timestamp );
 
+	$post_content = Settings\ingest_full_content()
+		? $item->get_content()
+		: $item->get_description();
+
 	$post_data = array(
 		'post_title'     => wp_strip_all_tags( $item->get_title() ),
-		'post_content'   => wp_kses_post( $item->get_content() ),
+		'post_content'   => wp_kses_post( $post_content ),
 		'post_excerpt'   => wp_kses_post( $item->get_description() ),
 		'post_date_gmt'  => $mysql_date_gmt,
 		'post_status'    => 'publish',

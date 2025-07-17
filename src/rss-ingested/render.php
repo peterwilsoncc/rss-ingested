@@ -64,14 +64,19 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 		);
 	}
 
+	if ( ! Settings\ingest_full_content() ) {
+		// Always use the excerpt if full content is not being ingested.
+		$attributes['displayPostContentRadio'] = 'excerpt';
+	}
+
 	if ( isset( $attributes['displayPostContent'] ) && $attributes['displayPostContent']
 		&& isset( $attributes['displayPostContentRadio'] ) && 'excerpt' === $attributes['displayPostContentRadio'] ) {
 		$pwcc_rss_ingested_trimmed_excerpt = get_the_excerpt( $pwcc_rss_ingested_post );
 
 		/*
-			* Adds a "Read more" link with screen reader text.
-			* [&hellip;] is the default excerpt ending from wp_trim_excerpt() in Core.
-			*/
+		 * Adds a "Read more" link with screen reader text.
+		 * [&hellip;] is the default excerpt ending from wp_trim_excerpt() in Core.
+		 */
 		if ( str_ends_with( $pwcc_rss_ingested_trimmed_excerpt, ' [&hellip;]' ) ) {
 			/** This filter is documented in wp-includes/formatting.php */
 			$pwcc_rss_ingested_excerpt_length = (int) apply_filters( 'excerpt_length', $pwcc_rss_ingested_block_core_latest_posts_excerpt_length ); //phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- core hook.
