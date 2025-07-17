@@ -82,11 +82,24 @@ function register_custom_taxonomy() {
 		return;
 	}
 
+	$labels = array(
+		'name'          => __( 'Syndicated Sites', 'rss-ingested' ),
+		'singular_name' => __( 'Syndicated Site', 'rss-ingested' ),
+		'menu_name'     => __( 'Syndicated Sites', 'rss-ingested' ),
+		'all_items'     => __( 'All Syndicated Sites', 'rss-ingested' ),
+		'edit_item'     => __( 'Edit Syndicated Site', 'rss-ingested' ),
+		'view_item'     => __( 'View Syndicated Site', 'rss-ingested' ),
+		'update_item'   => __( 'Update Syndicated Site', 'rss-ingested' ),
+		'add_new_item'  => __( 'Add New Syndicated Site', 'rss-ingested' ),
+		'new_item_name' => __( 'New Syndicated Site Name', 'rss-ingested' ),
+	);
+
 	register_taxonomy(
 		'rss_syndicated_site',
 		'rss_syndicated_post',
 		array(
 			'label'             => __( 'Syndicated Sites', 'rss-ingested' ),
+			'labels'            => $labels,
 			'public'            => true,
 			'show_in_rest'      => true,
 			'rest_base'         => 'syndicated_sites',
