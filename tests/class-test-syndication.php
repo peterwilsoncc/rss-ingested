@@ -124,7 +124,7 @@ class Test_Syndication extends WP_UnitTestCase {
 		);
 
 		// The post should now be a draft.
-		$this->assertSame( 'draft', get_post_status( $post_id ), 'The post should be published initially.' );
+		$this->assertSame( 'draft', get_post_status( $post_id ), 'The post should be a draft following the update.' );
 
 		// Update the feed.
 		self::filter_request( 'https://wordpress.org/news/feed/', 'wp-org-news-latest.rss' );
@@ -173,7 +173,7 @@ class Test_Syndication extends WP_UnitTestCase {
 		);
 
 		// The post should now be a draft.
-		$this->assertSame( 'draft', get_post_status( $post_id ), 'The post should be published initially.' );
+		$this->assertSame( 'draft', get_post_status( $post_id ), 'The post should be a draft following the update.' );
 
 		// Update the feed.
 		self::filter_request( 'https://wordpress.org/news/feed/', 'wp-org-news-updated.rss' );
@@ -220,7 +220,7 @@ class Test_Syndication extends WP_UnitTestCase {
 		);
 
 		// The post should now be a draft.
-		$this->assertSame( 'draft', get_post_status( $post_id ), 'The post should be published initially.' );
+		$this->assertSame( 'draft', get_post_status( $post_id ), 'The post should be a draft following the update.' );
 
 		// Update the feed.
 		self::filter_request( 'https://wordpress.org/news/feed/', 'wp-org-news-edited.rss' );
