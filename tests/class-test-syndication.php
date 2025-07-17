@@ -34,6 +34,9 @@ class Test_Syndication extends WP_UnitTestCase {
 		remove_all_filters( 'pre_http_request' );
 	}
 
+	/**
+	 * Set up each test.
+	 */
 	public function set_up() {
 		parent::set_up();
 		add_filter( 'pwcc_rss_ingested_ingest_full_content', '__return_true' );
