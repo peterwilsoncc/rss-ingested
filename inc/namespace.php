@@ -41,6 +41,10 @@ function bootstrap() {
  * to account for the custom post type and taxonomy.
  */
 function register_custom_block() {
+	if ( class_exists( 'WP_UnitTestCase' ) ) {
+		// Don't register the block in unit tests.
+		return;
+	}
 	// Only available in 6.8 and later.
 	wp_register_block_types_from_metadata_collection( dirname( __DIR__ ) . '/build', dirname( __DIR__ ) . '/build/blocks-manifest.php' );
 
