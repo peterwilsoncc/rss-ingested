@@ -66,6 +66,7 @@ foreach ( $pwcc_rss_ingested_recent_posts as $pwcc_rss_ingested_post ) {
 
 	if ( ! Settings\ingest_full_content() ) {
 		// Always use the excerpt if full content is not being ingested.
+		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- this is a variable from the block.
 		$attributes['displayPostContentRadio'] = 'excerpt';
 	}
 
