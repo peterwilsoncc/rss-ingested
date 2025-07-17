@@ -43,6 +43,24 @@ function bootstrap() {
 function register_custom_block() {
 	// Only available in 6.8 and later.
 	wp_register_block_types_from_metadata_collection( dirname( __DIR__ ) . '/build', dirname( __DIR__ ) . '/build/blocks-manifest.php' );
+
+	$settings = array(
+		'taxonomy' => Settings\get_syndicated_site_taxonomy(),
+		'postType' => Settings\get_syndicated_feed_post_type(),
+	);
+
+	$script = '
+	var PWCC = window.PWCC || {};
+	PWCC.rssIngestedSettings = function() {
+		return ' . wp_json_encode( $settings ) . '
+	};
+	';
+
+	wp_add_inline_script(
+		'pwcc-rss-ingested-editor-script',
+		$script,
+		'before'
+	);
 }
 
 /**
