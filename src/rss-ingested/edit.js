@@ -14,6 +14,7 @@ import {
 	Spinner,
 	ToggleControl,
 	ToolbarGroup,
+	SelectControl,
 	__experimentalToolsPanel as ToolsPanel,
 	__experimentalToolsPanelItem as ToolsPanelItem,
 } from '@wordpress/components';
@@ -31,6 +32,8 @@ import { store as noticeStore } from '@wordpress/notices';
 import { useInstanceId, useViewportMatch } from '@wordpress/compose';
 import { createInterpolateElement } from '@wordpress/element';
 
+const { rssIngestedSettings } = window.PWCC;
+
 /**
  * Internal dependencies
  */
@@ -44,7 +47,7 @@ import {
 /**
  * Module Constants
  */
-const CATEGORIES_LIST_QUERY = {
+const TERM_LIST_QUERY = {
 	per_page: -1,
 	_fields: 'id,name',
 	context: 'view',
@@ -68,72 +71,84 @@ function Controls( { attributes, setAttributes, postCount } ) {
 		postsToShow,
 		order,
 		orderBy,
-		categories,
+		termIds,
 		displayPostContentRadio,
 		displayPostContent,
 		displayPostDate,
+		displaySiteName,
 		postLayout,
 		columns,
 		excerptLength,
 	} = attributes;
-	const { categoriesList } = useSelect( ( select ) => {
+	const { termQueryList: termList } = useSelect( ( select ) => {
 		const { getEntityRecords } = select( coreStore );
 
 		return {
-			categoriesList: getEntityRecords(
+			termQueryList: getEntityRecords(
 				'taxonomy',
-				'rss_syndicated_site', // @todo: Use the dynamic taxonomy.
-				CATEGORIES_LIST_QUERY
+				rssIngestedSettings().taxonomy,
+				TERM_LIST_QUERY
 			),
 		};
 	}, [] );
 
 	const dropdownMenuProps = useToolsPanelDropdownMenuProps();
 
-	const categorySuggestions =
-		categoriesList?.reduce(
-			( accumulator, category ) => ( {
-				...accumulator,
-				[ category.name ]: category,
-			} ),
-			{}
-		) ?? {};
-	const selectCategories = ( tokens ) => {
-		const hasNoSuggestion = tokens.some(
-			( token ) =>
-				typeof token === 'string' && ! categorySuggestions[ token ]
-		);
-		if ( hasNoSuggestion ) {
+	const termSuggestions =
+		termList?.reduce(
+			( accumulator, term ) =>
+				( () => {
+					accumulator.push( { value: term.id, label: term.name } );
+					return accumulator;
+				} )(),
+			[ { value: 0, label: __( 'All sites', 'rss-ingested' ) } ]
+		) ?? [];
+
+	const selectTerms = ( newTerm ) => {
+		if ( 0 === parseInt( newTerm, 10 ) ) {
+			setAttributes( { termIds: [] } );
 			return;
 		}
-		// Categories that are already will be objects, while new additions will be strings (the name).
-		// allCategories nomalizes the array so that they are all objects.
-		const allCategories = tokens.map( ( token ) => {
-			return typeof token === 'string'
-				? categorySuggestions[ token ]
-				: token;
-		} );
-		// We do nothing if the category is not selected
-		// from suggestions.
-		if ( allCategories.includes( null ) ) {
-			return false;
-		}
-		setAttributes( { categories: allCategories } );
+
+		const term = termSuggestions.find(
+			( element ) => element.value.toString() === newTerm.toString()
+		);
+
+		setAttributes( { termIds: [ { id: term.value, label: term.label } ] } );
 	};
 
 	return (
 		<>
 			<ToolsPanel
-				label={ __( 'Post content', 'rss-ingested' ) }
+				label={ __( 'Display options', 'rss-ingested' ) }
 				resetAll={ () =>
 					setAttributes( {
 						displayPostContent: false,
 						displayPostContentRadio: 'excerpt',
 						excerptLength: DEFAULT_EXCERPT_LENGTH,
+						displayPostDate: false,
+						displaySiteName: true,
 					} )
 				}
 				dropdownMenuProps={ dropdownMenuProps }
 			>
+				<ToolsPanelItem
+					hasValue={ () => !! displaySiteName }
+					label={ __( 'Display site name', 'rss-ingested' ) }
+					onDeselect={ () =>
+						setAttributes( { displaySiteName: false } )
+					}
+					isShownByDefault
+				>
+					<ToggleControl
+						__nextHasNoMarginBottom
+						label={ __( 'Display site name', 'rss-ingested' ) }
+						checked={ displaySiteName }
+						onChange={ ( value ) =>
+							setAttributes( { displaySiteName: value } )
+						}
+					/>
+				</ToolsPanelItem>
 				<ToolsPanelItem
 					hasValue={ () => !! displayPostContent }
 					label={ __( 'Display post content', 'rss-ingested' ) }
@@ -216,16 +231,6 @@ function Controls( { attributes, setAttributes, postCount } ) {
 							/>
 						</ToolsPanelItem>
 					) }
-			</ToolsPanel>
-			<ToolsPanel
-				label={ __( 'Post meta', 'rss-ingested' ) }
-				resetAll={ () =>
-					setAttributes( {
-						displayPostDate: false,
-					} )
-				}
-				dropdownMenuProps={ dropdownMenuProps }
-			>
 				<ToolsPanelItem
 					hasValue={ () => !! displayPostDate }
 					label={ __( 'Display post date', 'rss-ingested' ) }
@@ -244,7 +249,6 @@ function Controls( { attributes, setAttributes, postCount } ) {
 					/>
 				</ToolsPanelItem>
 			</ToolsPanel>
-
 			<ToolsPanel
 				label={ __( 'Sorting and filtering', 'rss-ingested' ) }
 				resetAll={ () =>
@@ -252,7 +256,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						order: 'desc',
 						orderBy: 'date',
 						postsToShow: 5,
-						categories: undefined,
+						termIds: undefined,
 						columns: 3,
 					} )
 				}
@@ -263,7 +267,7 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						order !== 'desc' ||
 						orderBy !== 'date' ||
 						postsToShow !== 5 ||
-						categories?.length > 0
+						termIds?.length > 0
 					}
 					label={ __( 'Sort and filter', 'rss-ingested' ) }
 					onDeselect={ () =>
@@ -288,9 +292,14 @@ function Controls( { attributes, setAttributes, postCount } ) {
 						onNumberOfItemsChange={ ( value ) =>
 							setAttributes( { postsToShow: value } )
 						}
-						categorySuggestions={ categorySuggestions }
-						onCategoryChange={ selectCategories }
-						selectedCategories={ categories }
+					/>
+					<SelectControl
+						label={ __( 'Syndicated site', 'rss-ingested' ) }
+						value={ termIds?.[ 0 ]?.id }
+						options={ termSuggestions }
+						onChange={ selectTerms }
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
 					/>
 				</ToolsPanelItem>
 
@@ -335,10 +344,11 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 		postsToShow,
 		order,
 		orderBy,
-		categories,
+		termIds,
 		displayPostContentRadio,
 		displayPostContent,
 		displayPostDate,
+		displaySiteName,
 		postLayout,
 		columns,
 		excerptLength,
@@ -346,13 +356,13 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 	const { latestPosts } = useSelect(
 		( select ) => {
 			const { getEntityRecords } = select( coreStore );
-			const catIds =
-				categories && categories.length > 0
-					? categories.map( ( cat ) => cat.id )
+			const termQueryIds =
+				termIds && termIds.length > 0
+					? termIds.map( ( term ) => term.id )
 					: [];
 			const latestPostsQuery = Object.fromEntries(
 				Object.entries( {
-					syndicated_sites: catIds,
+					syndicated_sites: termQueryIds,
 					order,
 					orderby: orderBy,
 					per_page: postsToShow,
@@ -364,12 +374,12 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 			return {
 				latestPosts: getEntityRecords(
 					'postType',
-					'rss_syndicated_post', // @todo: Use the dynamic post type.
+					rssIngestedSettings().postType,
 					latestPostsQuery
 				),
 			};
 		},
-		[ postsToShow, order, orderBy, categories ]
+		[ postsToShow, order, orderBy, termIds ]
 	);
 
 	// If a user clicks to a link prevent redirection and show a warning.
@@ -452,107 +462,121 @@ export default function LatestPostsEdit( { attributes, setAttributes } ) {
 			<BlockControls>
 				<ToolbarGroup controls={ layoutControls } />
 			</BlockControls>
-			<ul { ...blockProps }>
-				{ displayPosts.map( ( post ) => {
-					const titleTrimmed = post.title.rendered.trim();
-					let excerpt = post.excerpt.rendered;
+			<div { ...blockProps }>
+				{ displaySiteName && (
+					<h2 className="pwcc-rss-ingested-block-latest-posts__site-name">
+						{ termIds?.[ 0 ]?.label }
+					</h2>
+				) }
+				<ul>
+					{ displayPosts.map( ( post ) => {
+						const titleTrimmed = post.title.rendered.trim();
+						let excerpt = post.excerpt.rendered;
 
-					const excerptElement = document.createElement( 'div' );
-					excerptElement.innerHTML = excerpt;
+						const excerptElement = document.createElement( 'div' );
+						excerptElement.innerHTML = excerpt;
 
-					excerpt =
-						excerptElement.textContent ||
-						excerptElement.innerText ||
-						'';
+						excerpt =
+							excerptElement.textContent ||
+							excerptElement.innerText ||
+							'';
 
-					const needsReadMore =
-						excerptLength < excerpt.trim().split( ' ' ).length &&
-						post.excerpt.raw === '';
+						const needsReadMore =
+							excerptLength <
+								excerpt.trim().split( ' ' ).length &&
+							post.excerpt.raw === '';
 
-					const postExcerpt = needsReadMore ? (
-						<>
-							{ excerpt
-								.trim()
-								.split( ' ', excerptLength )
-								.join( ' ' ) }
-							{ createInterpolateElement(
-								sprintf(
-									/* translators: 1: Hidden accessibility text: Post title */
-									__(
-										'… <a>Read more<span>: %1$s</span></a>',
-										'rss-ingested'
+						const postExcerpt = needsReadMore ? (
+							<>
+								{ excerpt
+									.trim()
+									.split( ' ', excerptLength )
+									.join( ' ' ) }
+								{ createInterpolateElement(
+									sprintf(
+										/* translators: 1: Hidden accessibility text: Post title */
+										__(
+											'… <a>Read more<span>: %1$s</span></a>',
+											'rss-ingested'
+										),
+										titleTrimmed ||
+											__( '(no title)', 'rss-ingested' )
 									),
-									titleTrimmed ||
-										__( '(no title)', 'rss-ingested' )
-								),
-								{
-									a: (
-										// eslint-disable-next-line jsx-a11y/anchor-has-content
-										<a
-											className="pwcc-rss-ingested-block-latest-posts__read-more"
-											href={ post.link }
-											rel="noopener noreferrer"
-											onClick={
-												showRedirectionPreventedNotice
-											}
-										/>
-									),
-									span: (
-										<span className="screen-reader-text" />
-									),
-								}
-							) }
-						</>
-					) : (
-						excerpt
-					);
+									{
+										a: (
+											// eslint-disable-next-line jsx-a11y/anchor-has-content
+											<a
+												className="pwcc-rss-ingested-block-latest-posts__read-more"
+												href={ post.link }
+												rel="noopener noreferrer"
+												onClick={
+													showRedirectionPreventedNotice
+												}
+											/>
+										),
+										span: (
+											<span className="screen-reader-text" />
+										),
+									}
+								) }
+							</>
+						) : (
+							excerpt
+						);
 
-					return (
-						<li key={ post.id }>
-							<a
-								className="pwcc-rss-ingested-block-latest-posts__post-title"
-								href={ post.link }
-								rel="noreferrer noopener"
-								dangerouslySetInnerHTML={
-									!! titleTrimmed
-										? {
-												__html: titleTrimmed,
-										  }
-										: undefined
-								}
-								onClick={ showRedirectionPreventedNotice }
-							>
-								{ ! titleTrimmed
-									? __( '(no title)', 'rss-ingested' )
-									: null }
-							</a>
-							{ displayPostDate && post.date_gmt && (
-								<time
-									dateTime={ format( 'c', post.date_gmt ) }
-									className="pwcc-rss-ingested-block-latest-posts__post-date"
+						return (
+							<li key={ post.id }>
+								<a
+									className="pwcc-rss-ingested-block-latest-posts__post-title"
+									href={ post.link }
+									rel="noreferrer noopener"
+									dangerouslySetInnerHTML={
+										!! titleTrimmed
+											? {
+													__html: titleTrimmed,
+											  }
+											: undefined
+									}
+									onClick={ showRedirectionPreventedNotice }
 								>
-									{ dateI18n( dateFormat, post.date_gmt ) }
-								</time>
-							) }
-							{ displayPostContent &&
-								displayPostContentRadio === 'excerpt' && (
-									<div className="pwcc-rss-ingested-block-latest-posts__post-excerpt">
-										{ postExcerpt }
-									</div>
+									{ ! titleTrimmed
+										? __( '(no title)', 'rss-ingested' )
+										: null }
+								</a>
+								{ displayPostDate && post.date_gmt && (
+									<time
+										dateTime={ format(
+											'c',
+											post.date_gmt
+										) }
+										className="pwcc-rss-ingested-block-latest-posts__post-date"
+									>
+										{ dateI18n(
+											dateFormat,
+											post.date_gmt
+										) }
+									</time>
 								) }
-							{ displayPostContent &&
-								displayPostContentRadio === 'full_post' && (
-									<div
-										className="pwcc-rss-ingested-block-latest-posts__post-full-content"
-										dangerouslySetInnerHTML={ {
-											__html: post.content.raw.trim(),
-										} }
-									/>
-								) }
-						</li>
-					);
-				} ) }
-			</ul>
+								{ displayPostContent &&
+									displayPostContentRadio === 'excerpt' && (
+										<div className="pwcc-rss-ingested-block-latest-posts__post-excerpt">
+											{ postExcerpt }
+										</div>
+									) }
+								{ displayPostContent &&
+									displayPostContentRadio === 'full_post' && (
+										<div
+											className="pwcc-rss-ingested-block-latest-posts__post-full-content"
+											dangerouslySetInnerHTML={ {
+												__html: post.content.raw.trim(),
+											} }
+										/>
+									) }
+							</li>
+						);
+					} ) }
+				</ul>
+			</div>
 		</>
 	);
 }

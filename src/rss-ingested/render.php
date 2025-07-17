@@ -24,13 +24,13 @@ $pwcc_rss_ingested_query_args = array(
 $pwcc_rss_ingested_block_core_latest_posts_excerpt_length = $attributes['excerptLength'];
 add_filter( 'excerpt_length', 'block_core_latest_posts_get_excerpt_length', 20 );
 
-if ( ! empty( $attributes['categories'] ) ) {
+if ( ! empty( $attributes['termIds'] ) ) {
 	// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query -- term__in query is fine.
 	$pwcc_rss_ingested_query_args['tax_query'] = array(
 		array(
 			'taxonomy' => Settings\get_syndicated_site_taxonomy(),
 			'field'    => 'id',
-			'terms'    => array_column( $attributes['categories'], 'id' ),
+			'terms'    => array_column( $attributes['termIds'], 'id' ),
 		),
 	);
 }
@@ -132,10 +132,25 @@ if ( isset( $attributes['style']['elements']['link']['color']['text'] ) ) {
 	$pwcc_rss_ingested_classes[] = 'has-link-color';
 }
 
+$pwcc_rss_ingested_site_name_markup = '';
+if (
+	isset( $attributes['displaySiteName'] ) && $attributes['displaySiteName']
+	&& isset( $attributes['termIds'] ) && ! empty( $attributes['termIds'] )
+) {
+	$pwcc_rss_ingested_site_name = get_term( $attributes['termIds'][0]['id'], Settings\get_syndicated_site_taxonomy() );
+
+	$pwcc_rss_ingested_site_name_markup = sprintf(
+		'<h2 class="pwcc-rss-ingested-block-latest-posts__site-name">%s</h2>',
+		esc_html( $pwcc_rss_ingested_site_name->name )
+	);
+}
+
 $pwcc_rss_ingested_wrapper_attributes = get_block_wrapper_attributes( array( 'class' => implode( ' ', $pwcc_rss_ingested_classes ) ) );
 
 printf(
-	'<ul %1$s>%2$s</ul>',
+	'<div>%1$s<ul %2$s>%3$s</ul></div>',
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above.
+	$pwcc_rss_ingested_site_name_markup,
 	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped on input.
 	$pwcc_rss_ingested_wrapper_attributes,
 	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped on input.
