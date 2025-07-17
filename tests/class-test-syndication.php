@@ -25,11 +25,18 @@ class Test_Syndication extends WP_UnitTestCase {
 	 */
 	public static function wpSetUpBeforeClass( \WP_UnitTest_Factory $factory ) {
 		// Set up the test data via a request.
+		add_filter( 'pwcc_rss_ingested_ingest_full_content', '__return_true' );
 		self::filter_request( 'https://wordpress.org/news/feed/', 'wp-org-news-latest.rss' );
 		Syndicate\syndicate_feed( 'https://wordpress.org/news/feed/' );
 
 		// Remove the filter so it doesn't get backed up in the default setup.
+		remove_filter( 'pwcc_rss_ingested_ingest_full_content', '__return_true' );
 		remove_all_filters( 'pre_http_request' );
+	}
+
+	public function set_up() {
+		parent::set_up();
+		add_filter( 'pwcc_rss_ingested_ingest_full_content', '__return_true' );
 	}
 
 	/**
