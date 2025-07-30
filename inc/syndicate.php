@@ -30,6 +30,7 @@ function register_cron_jobs() {
 	foreach ( $feeds as $feed ) {
 		$timestamp = wp_next_scheduled( 'pwp_syndicate_feed', array( $feed['feed_url'] ) );
 		if ( false === $timestamp ) {
+			// Feeds are cached for twelve hours, this ensures the feed is updated within an hour of the cache expiring.
 			wp_schedule_event( time(), 'hourly', 'pwp_syndicate_feed', array( $feed['feed_url'] ) );
 		}
 	}
